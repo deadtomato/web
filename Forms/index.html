@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Forms</title>
+</head>
+
+<body>
+  <h1>Форма заказа</h1>
+  <form action="#" method='get'
+    oninput="heightOut.value=height.value; widthOut.value=width.value; lengthOut.value=length.value"
+    enctype="multipart/form-data">
+    <fieldset>
+      <legend>Персональные данные</legend>
+      <label>
+        Имя пользователя:
+        <input type="text" name="userName" id="userName" placeholder="Иванов Иван Иваныч" required autofocus
+          tabindex="1">
+      </label>
+      <label>
+        Email:
+        <input type="email" name="userEmail" id="userEmail" placeholder="example@email.com" required tabindex="5">
+      </label>
+      <label>
+        Номер телефона:
+        <input type="tel" name="userPhoneNumber" id="userPhoneNumber" pattern="[0-9]-[0-9]{3}-[0-9]{5}"
+          placeholder="9-999-99999" tabindex="3">
+      </label>
+      <label>
+        Дата рождения:
+        <input type="date" name="userBirthday" id="userBirthday" required tabindex="2">
+      </label>
+
+      Пол:
+      <label>Мужской <input type="radio" name="userSex" id="userSex" value="male"></label>
+      <label>Женский <input type="radio" name="userSex" id="userSex" value="female"></label>
+    </fieldset>
+    <fieldset>
+      <legend>Адрес доставки</legend>
+
+      <label>
+        Страна:
+        <input type="text" name="country" id="country" placeholder="Россия" required>
+      </label>
+      <label>
+        Почтовый индекс: <input type="text" name="zipCode" id="zipCode" required placeholder="999999">
+      </label>
+      <label>
+        Область: <input type="text" name="region" id="region" placeholder="Московская" required>
+      </label>
+      <label>
+        Город: <input type="text" name="city" id="city" placeholder="Москва" required>
+      </label>
+      <label>
+        Улица: <input type="text" name="street" id="street" placeholder="Садовая" required>
+      </label>
+      <label>
+        Дом: <input type="text" name="houseNumber" id="houseNumber" placeholder="1" required>
+      </label>
+      <label>
+        Квартира: <input type="number" name="flatNumber" id="flatNumber" min="1" placeholder="1">
+      </label>
+    </fieldset>
+    <fieldset>
+      <legend>Способ доставки</legend>
+      <label>
+        Сервис доставки:
+        <select name="delivery" id="delivery">
+          <option value="russianPost">Почта России</option>
+          <option value="dhl">DHL</option>
+          <option value="spsr">СПСР</option>
+          <option value="dellin">Деловые Линии</option>
+        </select>
+      </label>
+
+      <label>
+        Способ доставки:
+        <select name="delivery" id="delivery">
+          <option value="Express delivery">Курьерская доставка</option>
+          <option value="postOffice">В почтовое отделение</option>
+        </select>
+      </label>
+
+      <label>
+        Дополнительные опции:
+        <select name="delivery" id="delivery" multiple>
+          <option value="giftWrap">Подарочная упаковка</option>
+          <option value="insurance">Страховка</option>
+          <option value="superExpress">Ускоренная доставка</option>
+          <option value="withSong">Доставка с песней</option>
+        </select>
+      </label>
+      <label>
+        Цвет упаковки:
+        <input type="color" name="color" id="color">
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>
+        Параметры посылки
+      </legend>
+      <label>
+        Длинна:
+        <input type="range" name="length" id="length" min="0.1" max="10.0" step="0.1" value="5">
+        <output name="lengthOut">5</output>
+
+        м
+      </label>
+      <label>
+        Ширина:
+        <input type="range" name="width" id="width" min="0.1" max="10.0" step="0.1" value="10">
+        <output name="widthOut">10</output>
+        м
+      </label>
+      <label>
+        Высота:
+        <input type="range" name="height" id="height" min="0.1" max="10.0" step="0.1" value="0.1">
+        <output name="heightOut">0.1</output>
+        м
+      </label>
+
+      <label>
+        Хрупкое
+        <input type="checkbox" name="additional" id="additional" value="fragile">
+      </label>
+      <label>
+        Ценное
+        <input type="checkbox" name="additional" id="additional" value="valuable">
+      </label>
+      <label>
+        Важное
+        <input type="checkbox" name="additional" id="additional" value="important">
+      </label>
+      <label>
+        Подарок
+        <input type="checkbox" name="additional" id="additional" value="gift">
+      </label>
+      <label>
+        Подарок
+        <input type="checkbox" name="additional" id="additional" value="something" checked>
+      </label>
+
+    </fieldset>
+    <fieldset>
+      <legend>Комментарии к заказу</legend>
+      <textarea name="comment" id="comment" cols="50" rows="10" placeholder="Ваш комментарий" tabindex="5"></textarea>
+    </fieldset>
+
+    <fieldset>
+      <legend>Служебная информация</legend>
+      <label>
+        <p>Служебная информация магазина или что-то еще очень важное!</p>
+        ID:
+        <input type="text" name="orderId" id="orderId" value="#sd456903-342" disabled>
+      </label>
+      <label>
+
+        <input type="text" name="orderInfo" id="orderInfo" value="Это очень важная информация" readonly>
+      </label>
+      <label>
+        <input type="text" name="" id="" value="Это скрытое поле!" hidden>
+      </label>
+
+      <label>
+        Подписаться на рассылку
+        <input type="checkbox" name="spam" id="spam" checked>
+      </label>
+      Загрузить копию квитанции
+      <label><input type="file" name="file" id="file"></label>
+    </fieldset>
+
+    <button type="submit">Отправить</button>
+    <button type="reset">Сбросить</button>
+  </form>
+  <a href="html5-topper.png" download>Скачать</a>
+</body>
+
+</html>
