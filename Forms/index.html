@@ -20,10 +20,14 @@
         <input type="text" name="userName" id="userName" placeholder="Иванов Иван Иваныч" required autofocus
           tabindex="1">
       </label>
+
       <label>
         Email:
         <input type="email" name="userEmail" id="userEmail" placeholder="example@email.com" required tabindex="5">
       </label>
+
+      <br>
+
       <label>
         Номер телефона:
         <input type="tel" name="userPhoneNumber" id="userPhoneNumber" pattern="[0-9]-[0-9]{3}-[0-9]{5}"
@@ -34,10 +38,13 @@
         <input type="date" name="userBirthday" id="userBirthday" required tabindex="2">
       </label>
 
+      <br>
+
       Пол:
       <label>Мужской <input type="radio" name="userSex" id="userSex" value="male"></label>
       <label>Женский <input type="radio" name="userSex" id="userSex" value="female"></label>
     </fieldset>
+
     <fieldset>
       <legend>Адрес доставки</legend>
 
@@ -48,22 +55,27 @@
       <label>
         Почтовый индекс: <input type="text" name="zipCode" id="zipCode" required placeholder="999999">
       </label>
+      <br>
       <label>
         Область: <input type="text" name="region" id="region" placeholder="Московская" required>
       </label>
+
       <label>
         Город: <input type="text" name="city" id="city" placeholder="Москва" required>
       </label>
+      <br>
       <label>
         Улица: <input type="text" name="street" id="street" placeholder="Садовая" required>
       </label>
       <label>
         Дом: <input type="text" name="houseNumber" id="houseNumber" placeholder="1" required>
       </label>
+      <br>
       <label>
         Квартира: <input type="number" name="flatNumber" id="flatNumber" min="1" placeholder="1">
       </label>
     </fieldset>
+
     <fieldset>
       <legend>Способ доставки</legend>
       <label>
@@ -83,7 +95,7 @@
           <option value="postOffice">В почтовое отделение</option>
         </select>
       </label>
-
+      <br>
       <label>
         Дополнительные опции:
         <select name="delivery" id="delivery" multiple>
@@ -123,6 +135,8 @@
         м
       </label>
 
+      <br>
+
       <label>
         Хрупкое
         <input type="checkbox" name="additional" id="additional" value="fragile">
@@ -140,10 +154,9 @@
         <input type="checkbox" name="additional" id="additional" value="gift">
       </label>
       <label>
-        Подарок
+        Что-то
         <input type="checkbox" name="additional" id="additional" value="something" checked>
       </label>
-
     </fieldset>
     <fieldset>
       <legend>Комментарии к заказу</legend>
@@ -164,6 +177,8 @@
       <label>
         <input type="text" name="" id="" value="Это скрытое поле!" hidden>
       </label>
+
+      <br>
 
       <label>
         Подписаться на рассылку
