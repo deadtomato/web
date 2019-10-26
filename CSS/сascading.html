@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Введение в CSS</title>
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="page-header">
+      <h1 class="page-header__title">Введение в CSS</h1>
+      <nav class="main-menu">
+        <ul class="main-menu__list list-formatter">
+          <li class="main-menu__item"><a class="main-menu__link" href="index.html">На главную</a></li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="css.html">Cascading Style Sheets (CSS)</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="css-rules.html">Правила построения CSS</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="css-link.html">Способы подключения CSS к
+              документу</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="selector-types.html">Виды селекторов</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="inherit.html">Наследование</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link current">Каскадирование</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="pseudoclass.html">Псевдоклассы</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="pseudocelement.html">Псевдоэлементы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-content">
+      <article class="article">
+        <h2 class="article__title">Каскадирование</h2>
+
+        <p class="page-content__text">Каскадность обозначает, что к одному и тому же элементу может применяться
+          несколько CSS-правил (наборов CSS-свойств).
+          Среди этих свойств могут быть и конфликтующие между собой. Поэтому существуют инструкции, которые определяют,
+          каким
+          будет финальный набор свойств элемента.</p>
+        <p class="page-content__text">CSS-правила существуют как минимум в трёх разных местах:</p>
+        <ol>
+          <li>в подключаемом файле style.css;</li>
+          <li>в атрибуте style;</li>
+          <li>в стандартных стилях отображения, встроенных в браузер.</li>
+        </ol>
+
+
+
+        <p class="page-content__text">Каскадирование как раз и определяет, какие именно свойства из этих источников
+          применятся.</p>
+
+        <p class="page-content__text">Имеется три основные концепции, управляющие порядком, в котором применяются
+          CSS-свойства:</p>
+        <ol>
+          <li>важность;</li>
+          <li>специфичность;</li>
+          <li>порядок исходного кода.</li>
+        </ol>
+        <h3>Расчёт значения специфичности</h3>
+        <p class="page-content__text">Специфичность селекторов делится на 4 группы — a, b, c, d:</p>
+        <ul>
+          <li>если стиль встроенный, то есть определён как style="...", то а=1, иначе a=0;</li>
+          <li>значение b равно количеству идентификаторов (тех, которые начинаются с #) в селекторе;</li>
+          <li>значение c равно количеству классов, псевдоклассов и селекторов атрибутов;</li>
+          <li>значение d равно количеству селекторов типов элементов и псевдо-элементов.</li>
+        </ul>
+        <p class="page-content__text">После этого полученное значение приводится к числу (обычно в десятичной системе
+          счисления). Селектор,
+          обладающий большим
+          значением специфичности, обладает и большим приоритетом.</p>
+        <table>
+          <tr>
+            <th>Селектор</th>
+            <th>a, b, c, d</th>
+            <th>Число</th>
+          </tr>
+          <tr>
+            <td>span</td>
+            <td>0, 0, 0, 1</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>div .class</td>
+            <td>0, 0, 1, 1</td>
+            <td>11</td>
+          </tr>
+          <tr>
+            <td>#id .class</td>
+            <td>0, 1, 1, 0</td>
+            <td>110</td>
+          </tr>
+          <tr>
+            <td>div span</td>
+            <td>0, 0, 0, 2</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>.class</td>
+            <td>0, 0, 1, 0</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>#id span</td>
+            <td>0, 1, 0, 1</td>
+            <td>101</td>
+          </tr>
+        </table>
+        <p class="page-content__text">Но, самым высоким приоритетом обладают стили, объявленные автором страницы или
+          пользователем, с помощью
+          сопроводительного правила <span class="page-content__text--select">!important</span>. Если таких свойств
+          несколько, то предпочтение отдаётся в первую очередь
+          стилям,
+          заданным автором или пользователем, а для остальных свойств, которые будут являться задаваемыми автором
+          страницы,
+          потребуется определить их специфичности по принципам, описанным выше, и применять эти свойства в порядке
+          убывания этих
+          специфичностей.</p>
+      </article>
+    </main>
+  </div>
+  <footer class="page-footer">
+    <a class="page-footer__copyright" href="https://cmit.ru/kursk/" target="_blank"><img src="img/logo_CMIT.png"
+        alt="Школа Цифровых Технологий"></a>
+    <ul class="page-footer__social list-formatter">
+      <li>
+        <a class="page-footer__link page-footer__link--vk" href="https://vk.com/cmit_46" target="_blank"
+          aria-label="Вконтакте"></a>
+      </li>
+      <li>
+        <a class="page-footer__link page-footer__link--instagram" href="https://www.instagram.com/robot_schoolkursk/"
+          target="_blank" aria-label="instagram">
+        </a>
+      </li>
+    </ul>
+  </footer>
+</body>
+
+</html>
