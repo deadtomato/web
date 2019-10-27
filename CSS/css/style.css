@@ -221,6 +221,17 @@ pre {
 .page-footer__copyright {
   filter: saturate(0);
 }
+.page-footer__tel {
+  color: white;
+}
+
+.page-footer__address {
+  font-size: 18px;
+}
+
+.page-footer__wrapper {
+  text-align: center;
+}
 
 .page-footer__copyright:hover,
 .page-footer__copyright:focus {
