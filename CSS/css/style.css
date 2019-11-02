@@ -305,3 +305,22 @@ pre {
   background-position: center;
   background-size: 50%, 100%;
 }
+
+.download-link {
+  padding: 10px 23px;
+  background-color: rgb(219, 219, 219);
+  box-shadow: 0 5px 0 0 rgb(209, 209, 209);
+  color: rgb(71, 71, 71);
+  border-radius: 8px;
+}
+
+.download-link:hover,
+.download-link:focus {
+  background-color: rgb(122, 122, 122);
+  color: rgb(228, 228, 228);
+  box-shadow: 0 5px 0 0 rgb(61, 61, 61);
+}
+
+.download-link:active {
+  box-shadow: inset 0 5px 0 0 rgb(61, 61, 61);
+}
