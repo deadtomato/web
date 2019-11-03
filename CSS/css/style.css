@@ -104,7 +104,7 @@ pre {
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.6);
   box-shadow: 0 0 20px 10px rgb(216, 216, 216), inset 0 50px 0 0 gray;
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 145px);
 }
 
 .page-content__text {
