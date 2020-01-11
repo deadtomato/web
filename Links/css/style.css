@@ -1,11 +1,11 @@
-
 @font-face {
   font-weight: 400;
   font-family: "Roboto Slab";
   font-style: normal;
 
-  src: url("../fonts/roboto-slab-v10-cyrillic_latin-regular.woff2") format("woff2"),
-  url("../fonts/roboto-slab-v10-cyrillic_latin-regular.woff") format("woff");
+  src: url("../fonts/roboto-slab-v10-cyrillic_latin-regular.woff2")
+      format("woff2"),
+    url("../fonts/roboto-slab-v10-cyrillic_latin-regular.woff") format("woff");
 }
 @font-face {
   font-weight: 700;
@@ -13,7 +13,7 @@
   font-style: normal;
 
   src: url("../fonts/roboto-slab-v10-cyrillic_latin-700.woff2") format("woff2"),
-  url("../fonts/roboto-slab-v10-cyrillic_latin-700.woff") format("woff");
+    url("../fonts/roboto-slab-v10-cyrillic_latin-700.woff") format("woff");
 }
 
 body {
@@ -48,6 +48,7 @@ img {
 .container {
   box-sizing: border-box;
   padding: 0 25px;
+  display: block;
 }
 
 .page-header {
@@ -86,6 +87,10 @@ img {
   min-height: 65.8vh;
 }
 
+.links {
+  margin-bottom: 70px;
+}
+
 .links__list {
   margin: 0;
   padding: 0;
@@ -96,13 +101,21 @@ img {
 .links__item {
   text-align: center;
   color: #4e4e4e;
+  margin-bottom: 50px;
+}
+
+.links__item:last-of-type {
+  margin-bottom: 0;
 }
 
 .links__link {
+  display: block;
   position: relative;
+
   font-size: 18px;
   line-height: 1;
   color: #4e4e4e;
+  margin-bottom: 20px;
 }
 
 .links__item:hover,
@@ -117,6 +130,51 @@ img {
   color: rgb(170, 64, 45);
 }
 
+.projects {
+  background: #ebebeb;
+  padding-bottom: 30px;
+  margin-bottom: 50px;
+}
+
+.projects__title {
+  padding: 7px 0 15px;
+  border-left: 10px solid;
+  margin-top: 0;
+  background-color: #ccc;
+  text-align: center;
+}
+
+.project {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.project:last-of-type {
+  margin-bottom: 0;
+}
+
+.project__title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.projects__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project__item {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.project__item:last-child {
+  margin-bottom: 0;
+}
+
 .page-footer {
   box-sizing: border-box;
   min-height: 5vh;
@@ -124,7 +182,7 @@ img {
 
 .page-footer .container {
   padding-top: 40px;
-
+  padding-bottom: 40px;
   border-top: 5px solid #141414;
   box-shadow: 0 -15px 10px -10px rgba(128, 128, 128, 1);
 }
@@ -146,7 +204,6 @@ img {
 @media (min-width: 768px) {
   .container {
     padding-right: 60px;
-    /* width: 1350px; */
     padding-left: 60px;
   }
 
@@ -171,8 +228,39 @@ img {
   }
 
   .section-title {
-    font-size: 36px;
     margin-bottom: 55px;
+
+    font-size: 36px;
+  }
+
+  .links__item {
+    margin-bottom: 50px;
+  }
+
+  .links__link {
+    display: inline;
+    padding-right: 10px;
+  }
+
+  .projects {
+    padding-bottom: 55px;
+    margin-bottom: 100px;
+  }
+
+  .projects__title {
+    font-size: 46px;
+    padding: 23px 0 33px;
+    border-left: 20px solid;
+  }
+
+  .project__title {
+    margin-top: 36px;
+    margin-bottom: 40px;
+    font-size: 36px;
+  }
+
+  .project__item {
+    margin-bottom: 40px;
   }
 
   .page-footer .container {
@@ -184,7 +272,6 @@ img {
   .links__link {
     font-size: 28px;
   }
-
 
   .page-footer__copy {
     font-size: 22px;
@@ -200,10 +287,23 @@ img {
 }
 
 @media (min-width: 1350px) {
+  .page-header {
+    margin-bottom: 70px;
+  }
+
+  .page-header .container {
+    margin-bottom: 0;
+  }
+
   .container {
     width: 1350px;
     margin: 0 auto;
     padding: 0;
+    margin-bottom: 100px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .page-header__title {
@@ -214,22 +314,33 @@ img {
     text-align: left;
   }
 
+  .links {
+    flex-grow: 1;
+    margin-bottom: 0;
+  }
+
   .links__list {
     padding-left: 35px;
   }
 
   .links__item {
     text-align: left;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .links__item:last-of-type {
+    margin-bottom: 0;
   }
 
   .links__link {
     padding-left: 25px;
   }
 
-    .links__link::before {
+  .links__item::before {
     content: "";
     position: absolute;
-    top: 16px;
+    top: 11px;
     left: 0;
 
     width: 10px;
@@ -239,10 +350,27 @@ img {
     border-radius: 50%;
   }
 
+  .projects {
+    width: 30%;
+    margin-bottom: 0;
+  }
+
+  .projects__list {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .project__title {
+    text-align: left;
+  }
+
+  .page-footer .container {
+    margin-bottom: 0;
+    display: block;
+  }
+
   .page-footer__copy {
     font-size: 22px;
     text-align: left;
   }
-
-
 }
