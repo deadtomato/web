@@ -97,6 +97,10 @@ figure {
   padding: 10px 0;
 }
 
+blockquote {
+  font-style: italic;
+}
+
 .visually-hidden {
   position: absolute;
 
