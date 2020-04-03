@@ -151,6 +151,11 @@ blockquote {
   color: #b46d0f;
 }
 
+.article__menu-link--external {
+  color:tomato;
+  font-weight: bold;
+}
+
 .article__item {
   padding-top: 10px;
 }
@@ -281,6 +286,7 @@ blockquote {
   .article__menu {
     position: sticky;
     top: 0;
+    width: 280px;
 
     align-self: flex-start;
     margin: 0;
@@ -309,5 +315,40 @@ blockquote {
   .close {
     top: 20px;
     right: 30px;
+  }
+
+  .article__img {
+    transition: transform 0.3s;
+  }
+
+  .article__img:hover, .article__img:focus {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+  }
+  
+  .article__link:hover, .article__link:focus {
+    color: tomato;
+  }
+
+  .article__menu-link:hover, .article__menu-link:focus {
+    text-decoration: underline;
+  }
+
+  .article__menu-link:active {
+    opacity: 0.7;
+  }
+  
+  .close {
+    transition: all 0.3s;
+  }
+
+  .close:hover, .close:focus {
+    color: white;
+    background-color: tomato;
+    transition: all 0.3s;
+  }
+
+  .close:active {
+    opacity: 0.8;
   }
 }
