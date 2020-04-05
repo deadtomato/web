@@ -343,35 +343,6 @@ blockquote {
     visibility: visible;
   }
 
-  .sub-menu__link:hover,
-  .sub-menu__link:focus {
-    opacity: 0.7;
-  }
-
-  .sub-menu__link:active {
-    opacity: 0.3;
-  }
-
-  .site-menu__link:hover, 
-  .site-menu__link:focus{
-    opacity: 0.7;
-  }
-
-  .site-menu__link:active{
-    opacity: 0.3;
-  }
-
-  .site-menu__link--current:hover,
-  .site-menu__link--current:focus{
-    opacity: 1;
-  }
-
-  .site-menu__link--projects:hover,
-  .site-menu__link--projects:focus{
-    opacity: 1;
-  }
-
-
   
   .article {
     position: relative;
