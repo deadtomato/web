@@ -442,13 +442,30 @@ blockquote {
 
     font-weight: 800;
     font-size: 14px;
-    color: tomato;
+    color: #ff6347;
   }
 
   .sub-menu__link:last-of-type {
     font-weight: 800;
     font-size: 14px;
     color: #d9b779;
+  }
+
+  .site-menu__link--projects {
+    padding-left: 25px;
+  }
+
+  .site-menu__link--projects::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 4px;
+    left: 4px;
+    background-image: url("../images/arrow.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   .site-menu__item--projects:hover .sub-menu,
