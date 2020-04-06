@@ -5,19 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Работа с git и github</title>
-  <link rel="preload" href="fonts/open-sans-v17-latin_cyrillic-regular.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/open-sans-v17-latin_cyrillic-italic.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/open-sans-v17-latin_cyrillic-800.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/fira-code-v8-latin_cyrillic-regular.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/fira-code-v8-latin_cyrillic-700.woff2" as="font" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="../fonts/open-sans-v17-latin_cyrillic-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="../fonts/open-sans-v17-latin_cyrillic-italic.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="../fonts/open-sans-v17-latin_cyrillic-800.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="../fonts/fira-code-v8-latin_cyrillic-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="../fonts/fira-code-v8-latin_cyrillic-700.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="../Styles//normalize.css">
+  <link rel="stylesheet" href="../Styles/style.css">
 </head>
 
 <body>
   <header class="page-header">
     <nav class="page-header__nav container">
+      <a class="page-header__btn page-header__btn--open" href="#" aria-label="Открыть меню"></a>
       <ul class="site-menu no-list">
+        <li class="site-menu__item site-menu__item--btn">
+          <a class="page-header__btn page-header__btn--close" aria-label="Закрыть меню"></a>
+        </li>
         <li class="site-menu__item">
           <a class="site-menu__link" href="../Node/index.html">Конфигурация проекта. Node.js и Gulp</a>
         </li>
@@ -107,7 +111,7 @@
                 alt="страница создания аккаунта сайта github.com">
             </figure>
             <p class="article__text">Придумываем <b>username</b>, вводим <b>e-mail</b>, придумываем <b>пароль</b></p>
-            <p class="article__text">Далее капча! <b>Verify your account</b></p>
+            <p class="article__text">Далее, капча! <b>Verify your account</b></p>
             <p class="article__text">И нажимаем на кнопку <b>Choose plan</b></p>
             <figure>
               <img class="article__img" src="img/git_04.png" width="580" height="326"
@@ -127,7 +131,7 @@
               <img class="article__img" src="img/git_07.png" width="580" height="326"
                 alt="страница подтверждения e-mail сайта github.com">
             </figure>
-            <p class="article__text">Далее нам предлагают создать первый репозиторий, но пока нам это делать на нужно.
+            <p class="article__text">Далее, нам предлагают создать первый репозиторий, но пока нам это делать на нужно.
             </p>
             <figure>
               <img class="article__img" src="img/git_08.png" width="580" height="326"
@@ -140,7 +144,7 @@
 
           <li class="article__item" id="configgit">
             <h3 class="article__title">Конфигурация Git</h3>
-            <p class="article__text">Cконфигурируем <b>Git</b> на нашем компьютере.</p>
+            <p class="article__text">Cконфигурируем <b>Git</b> на компьютере.</p>
             <p class="article__text"> Идем в терминал и пишем:</p>
             <p class="article__text"><code>git config --global user.name “АККАУНТ GITHUB”</code> <mark>username в
                 кавычках!</mark></p>
@@ -178,7 +182,7 @@
               <img class="article__img" src="img/git_12.png" width="580" height="326" alt="поиск по сайту github.com">
             </figure>
             <p class="article__text">Здесь видим вверху раздел <b>Popular repositories</b> (Или жмем на ссылку выше
-              <b>Repositories</b>). Затем нажимаем на <b>Cruises</b>.</p>
+              <b>Repositories</b>). Затем, нажимаем на <b>Cruises</b>.</p>
 
             <figure>
               <img class="article__img" src="img/git_13.png" width="580" height="326"
@@ -198,15 +202,15 @@
                 alt="Страница пользователя сайта github.com">
             </figure>
 
-            <p class="article__text"></p>Далее надо склонировать репозиторий на компьютер. Нажимаем зеленую кнопку
-            <b>Clone or download</b>, а далее на маленькую серую кнопку справа от адреса, так мы копируем ссылку в буфер
+            <p class="article__text"></p>Далее, надо склонировать репозиторий на компьютер. Нажимаем зеленую кнопку
+            <b>Clone or download</b>, а затем, на маленькую серую кнопку справа от адреса, так мы копируем ссылку в буфер
             обмена.</p>
 
             <figure>
               <img class="article__img" src="img/git_16.png" width="580" height="326"
                 alt="Страница репозитория сайта github.com">
             </figure>
-            <p class="article__text">Далее где-нибудь (в документах или на рабочем столе) создаем новую папку, я назову
+            <p class="article__text">Далее, где-нибудь (в документах или на рабочем столе) создаем новую папку, я назову
               ее <span class="article__file">Second_project</span>, заходим в нее и жмем правой кнопкой мыши по
               свободному полю в этой папки, во
               всплывающем меню выбираем пункт <b>Terminal</b>. (Если такого пункта меню нет, посмотри <a
@@ -237,7 +241,7 @@
 
             <p class="article__text">Далее пишем <code>git remote -v</code></p>
             <p class="article__text">
-              Так посмотрим список удаленных репозиториев. Пока здесь только один, наш, который по факту работает как на
+              Так, посмотрим список удаленных репозиториев. Пока здесь только один, наш, который по факту работает как на
               прием так и на отправку (fetch и push).</p>
             <figure>
               <img class="article__img" src="img/git_20.png" width="500" height="353" alt="команда ls">
@@ -381,7 +385,7 @@
     </div>
   </template>
 
-  <script src="js/script.js"></script>
+  <script src="../js/script.js"></script>
 </body>
 
 </html>

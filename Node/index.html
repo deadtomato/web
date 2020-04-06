@@ -5,19 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Конфигурация проекта. Node.js и Gulp</title>
-  <link rel="preload" href="fonts/open-sans-v17-latin_cyrillic-regular.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/open-sans-v17-latin_cyrillic-italic.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/open-sans-v17-latin_cyrillic-800.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/fira-code-v8-latin_cyrillic-regular.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/fira-code-v8-latin_cyrillic-700.woff2" as="font" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="../fonts/open-sans-v17-latin_cyrillic-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="../fonts/open-sans-v17-latin_cyrillic-italic.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="../fonts/open-sans-v17-latin_cyrillic-800.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="../fonts/fira-code-v8-latin_cyrillic-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="../fonts/fira-code-v8-latin_cyrillic-700.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="../Styles/normalize.css">
+  <link rel="stylesheet" href="../Styles/style.css">
 </head>
 
 <body>
   <header class="page-header">
     <nav class="page-header__nav container">
+      <a class="page-header__btn page-header__btn--open" href="#" aria-label="Открыть меню"></a>
       <ul class="site-menu no-list">
+        <li class="site-menu__item site-menu__item--btn">
+          <a class="page-header__btn page-header__btn--close" aria-label="Закрыть меню"></a>
+        </li>
         <li class="site-menu__item">
           <a class="site-menu__link site-menu__link--current">Конфигурация проекта. Node.js и Gulp</a>
         </li>
@@ -444,7 +448,7 @@
     </div>
   </template>
 
-  <script src="js/script.js"></script>
+  <script src="../js/script.js"></script>
 </body>
 
 </html>

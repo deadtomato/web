@@ -49,10 +49,6 @@
   url("../fonts/fira-code-v8-latin_cyrillic-700.woff") format("woff");
 }
 
-:root {
-  --zoom-width: 96%;
-}
-
 body {
   position: relative;
 
@@ -85,10 +81,14 @@ code {
   font-family: "Fira Code", "Courier New", monospace;
   color: #253fb1;
   font-style: normal;
+  word-break: break-all;
 
   background-color: #e8eaf7;
   border: 1px solid #a6b6fb;
-  border-radius: 3px;;
+  border-radius: 3px;
+}
+b {
+  word-break: break-word;
 }
 
 figure {
@@ -128,6 +128,109 @@ blockquote {
   margin: 0 auto;
 }
 
+.page-header__nav {
+  padding-top: 20px;
+}
+
+.page-header__btn--open {
+  display: block;
+  width: 24px;
+  height: 22px;
+  margin-left: 10px;
+
+  background-image: url("../images/burger-menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.site-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: none;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
+  padding-top: 100px;
+  padding-bottom: 70px;
+
+  text-align: center;
+
+  background-color: #ffffff;
+  box-shadow: 0 20px 25px -5px gray;
+}
+
+.site-menu__item {
+  margin-bottom: 25px;
+}
+
+.site-menu__item--projects {
+  margin-top: 80px;
+}
+
+.site-menu__item--btn {
+  position: absolute;
+  top: 19px;
+  left: 16px;
+}
+
+.page-header__btn--close {
+  display: block;
+  width: 23px;
+  height: 23px;
+  margin-left: 10px;
+
+  background-image: url("../images/close-btn.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.site-menu__link {
+  font-weight: 800;
+  font-size: 16px;
+  color: tomato;
+}
+
+.site-menu__link--current {
+  color: #494859;
+}
+
+.site-menu__link--projects::after {
+  content: ":";
+}
+
+.show {
+  display: block;
+}
+
+.sub-menu {
+  padding-top: 30px;
+}
+
+.sub-menu__item {
+  margin-bottom: 20px;
+}
+
+.sub-menu__link {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.sub-menu__link:first-of-type {
+  font-weight: 800;
+  font-size: 14px;
+  color: tomato;
+}
+
+.sub-menu__link:last-of-type {
+  font-weight: 800;
+  font-size: 14px;
+  color: #d9b779;
+}
+
 .page-content__title {
   font-size: 36px;
   line-height: 1.5;
@@ -152,8 +255,8 @@ blockquote {
 }
 
 .article__menu-link--external {
-  color:tomato;
   font-weight: bold;
+  color: tomato;
 }
 
 .article__item {
@@ -212,24 +315,19 @@ blockquote {
   background-color: #494859;
   border: 1px solid #353340;
   border-radius: 5px;
-
 }
 
 .zoom {
   position: fixed;
-
   top: 150px;
-  left: calc(50% - var(--zoom-width) / 2);
+  left: calc(50% - (96% / 2));
 
-  max-width: var(--zoom-width);
-  
-  margin: 0 auto;
-
-  padding: 1%;
   box-sizing: border-box;
+  max-width: 96%;
+  margin: 0 auto;
+  padding: 1%;
+
   background-color: #ffffff;
-
-
   box-shadow: 0 0 50px -10px black;
 }
 
@@ -244,98 +342,113 @@ blockquote {
   position: absolute;
   top: 14px;
   right: 14px;
+
   display: block;
   width: 100px;
-  border-radius: 10px;
-  background-color: #ffffff;
-  color: #000000;
-  border: none;
-  font-size: 12px;
-  font-weight: 800;
   padding: 5px;
+
+  font-weight: 800;
+  font-size: 12px;
+  color: #000000;
+
+  background-color: #ffffff;
+  border: none;
+  border-radius: 10px;
   box-shadow: 0 0 20px -5px black;
 }
 
 
 @media (min-width: 780px) {
-
-  :root {
-    --zoom-width: 80%;
-  }
   .zoom {
-    max-width: var(--zoom-width);
+    max-width: 80%;
   }
 }
 
 @media (min-width: 1120px) {
-  :root {
-    --zoom-width: 850px; 
-  }
-
   .container {
     width: 980px;
   }
+  .page-header__btn--open {
+    display: none;
+  }
 
   .site-menu {
+    position: static;
+
     display: flex;
     flex-wrap: wrap;
+    width: auto;
     margin-top: 30px;
+    /* left: auto;
+    top: auto; */
+    padding: 0;
+
+    background-color: transparent;
+    box-shadow: none;
   }
-  
+
   .site-menu__item {
     margin-right: 25px;
+    margin-bottom: 0;
   }
-  
+
+  .site-menu__item--btn {
+    display: none;
+  }
+
   .site-menu__link {
-    font-size: 14px;
     font-weight: 800;
+    font-size: 14px;
     color: tomato;
   }
 
   .site-menu__link--current {
     color: #494859;
   }
-  
+
   .site-menu__item--projects {
-    margin-left: auto;
-    margin-right: 0;
     position: relative;
+
+    margin: 0;
+    margin-right: 0;
+    margin-left: auto;
   }
 
   .sub-menu {
-    visibility: hidden;
     position: absolute;
-    box-sizing: border-box;
-    padding: 20px;
-    width: 370px;
-    right: 0;
     top: 100%;
-    background-color: #fff;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    right: 0;
 
+    box-sizing: border-box;
+    width: 370px;
+    padding: 20px;
+
+    background-color: #ffffff;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    visibility: hidden;
   }
 
   .sub-menu__item {
-    margin-bottom: 20px;
     display: flex;
+    margin-bottom: 20px;
   }
 
   .sub-menu__item:last-of-type {
     margin-bottom: 0;
-
   }
 
   .sub-menu__link:first-of-type {
-    color: tomato;
-    font-size: 14px;
-    font-weight: 800;
     margin-right: 20px;
+
+    font-weight: 800;
+    font-size: 14px;
+    color: tomato;
   }
 
   .sub-menu__link:last-of-type {
-    color: #d9b779;
-    font-size: 14px;
     font-weight: 800;
+    font-size: 14px;
+    color: #d9b779;
   }
 
   .site-menu__item--projects:hover .sub-menu,
@@ -343,7 +456,7 @@ blockquote {
     visibility: visible;
   }
 
-  
+
   .article {
     position: relative;
 
@@ -355,9 +468,9 @@ blockquote {
   .article__menu {
     position: sticky;
     top: 0;
-    width: 280px;
 
     align-self: flex-start;
+    width: 280px;
     margin: 0;
     padding: 0;
     padding-top: 40px;
@@ -375,10 +488,11 @@ blockquote {
   }
 
   .zoom {
-    max-width: var(--zoom-width);
     top: 60px;
-    left: calc(50% - var(--zoom-width)/2);
+    left: calc(50% - 850px/2);
     z-index: 100;
+
+    max-width: 850px;
   }
 
   .close {
@@ -390,30 +504,37 @@ blockquote {
     transition: transform 0.3s;
   }
 
-  .article__img:hover, .article__img:focus {
+  .article__img:hover,
+  .article__img:focus {
     transform: scale(1.05);
+
     transition: transform 0.3s;
   }
-  
-  .article__link:hover, .article__link:focus {
+
+  .article__link:hover,
+  .article__link:focus {
     color: tomato;
   }
 
-  .article__menu-link:hover, .article__menu-link:focus {
+  .article__menu-link:hover,
+  .article__menu-link:focus {
     text-decoration: underline;
   }
 
   .article__menu-link:active {
     opacity: 0.7;
   }
-  
+
   .close {
     transition: all 0.3s;
   }
 
-  .close:hover, .close:focus {
+  .close:hover,
+  .close:focus {
     color: white;
+
     background-color: tomato;
+
     transition: all 0.3s;
   }
 
