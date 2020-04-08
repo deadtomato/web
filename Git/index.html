@@ -58,6 +58,10 @@
           </li>
 
           <li class="article__menu-item">
+            <a href="#gitmac" class="article__menu-link">Установка Git на Mac</a>
+          </li>
+
+          <li class="article__menu-item">
             <a href="#reggithub" class="article__menu-link">Регистрируемся на Github</a>
           </li>
 
@@ -82,10 +86,12 @@
             </a>
           </li>
           <li class="article__menu-item">
-            <a href="https://youtu.be/F2PF6J-YYo4" target="_blank"  class="article__menu-link article__menu-link--external">Регистрация на Github (Видео)</a>
+            <a href="https://youtu.be/F2PF6J-YYo4" target="_blank"
+              class="article__menu-link article__menu-link--external">Регистрация на Github (Видео)</a>
           </li>
           <li class="article__menu-item">
-            <a href="https://youtu.be/N_t02qQdE9I" target="_blank"  class="article__menu-link article__menu-link--external">Работа c Git (видео)</a>
+            <a href="https://youtu.be/N_t02qQdE9I" target="_blank"
+              class="article__menu-link article__menu-link--external">Работа c Git (видео)</a>
           </li>
         </ul>
 
@@ -100,6 +106,79 @@
 
               <p class="article__text">Кроме прочего нам нужен аккаунт на <a class="article__link"
                   href="https://github.com/" target="_blank">Github</a>. Он же у вас есть, верно?</p>
+          </li>
+
+          <li class="article__item" id="gitmac">
+            <h3 class="article__title">Установка Git на Mac</h3>
+            <p class="article__text">Идем на официальный сайт <a class="article__link" href="https://git-scm.com/"
+                target="_blank">Git</a>. Нажимаем на зеленую кнопку в правом нижнем углу <b>Download 2.23.0 for Mac</b>.
+              Скачивается архив.</p>
+
+            <figure>
+              <img class="article__img" src="img/git-mac_01.png" width="580" height="326"
+                alt="главная страница сайта git-scm.com">
+            </figure>
+
+            <p class="article__text">Открываем архив и запускаем файл <span
+                class="article__file">git-2.23.0-....pkg</span></p>
+
+            <figure>
+              <img class="article__img" src="img/git-mac_02.png" width="580" height="326" alt="архив установщика git">
+            </figure>
+
+            <p class="article__text">Появится окно предупреждения, нажимаем <b>OK</b></p>
+
+            <figure>
+              <img class="article__img" src="img/git-mac_03.png" width="500" height="353"
+                alt="сообщение об отказе установки git на мас">
+            </figure>
+
+            <p class="article__text">Нам нужен другой способ, и он есть! Вызываем контекстное меню на файле и
+            выбираем <b>Открыть с помощью > Установщик</b>.
+            </p>
+
+            <figure>
+              <img class="article__img" src="img/git-mac_04.png" width="500" height="353"
+                alt="контекстное меню на установщике git на мас">
+            </figure>
+
+            <p class="article__text">В появившимся окне нажимаем <b>OPEN</b>.</p>
+
+            <figure>
+              <img class="article__img" src="img/git-mac_05.png" width="500" height="353"
+                alt="контекстное меню на установщике git на мас">
+            </figure>
+
+            <p class="article__text">Далее, стандартная процедура установки, нажимаем <b>CONTINUE</b>. <b>Git</b> займет
+              всего <b>72 мегабайта</b> свободного места! Нажимаем <b>INSTALL</b>. И установка завершена!</p>
+
+            <figure>
+              <img class="article__img" src="img/git-mac_06.png" width="500" height="353" alt="установка git на мас">
+            </figure>
+
+            <figure>
+              <img class="article__img" src="img/git-mac_07.png" width="500" height="353" alt="установка git на мас">
+            </figure>
+
+
+            <figure>
+              <img class="article__img" src="img/git-mac_08.png" width="500" height="353" alt="установка git на мас">
+            </figure>
+
+
+
+
+            <p class="article__text">Проверим. Откроем терминал и напишем <code>git --version</code> и нажмем
+              <b>Enter</b></p>
+            <p class="article__text">Видим версию.</p>
+
+
+            <figure>
+              <img class="article__img" src="img/git-mac_09.png" width="500" height="353" alt="установка git на мас">
+            </figure>
+
+            <p class="article__text"><b>Git</b> установлен!</p>
+
           </li>
 
           <li class="article__item" id="reggithub">
@@ -200,7 +279,7 @@
                 alt="Страница пользователя сайта github.com">
             </figure>
 
-            <p class="article__text"></p><b>Github</b> копирует репозиторий и перенаправляет нас в копию, которая теперь
+            <p class="article__text"><b>Github</b> копирует репозиторий и перенаправляет нас в копию, которая теперь
             в нашем аккаунте.</p>
 
             <figure>
@@ -208,8 +287,9 @@
                 alt="Страница пользователя сайта github.com">
             </figure>
 
-            <p class="article__text"></p>Далее, надо склонировать репозиторий на компьютер. Нажимаем зеленую кнопку
-            <b>Clone or download</b>, а затем, на маленькую серую кнопку справа от адреса, так мы копируем ссылку в буфер
+            <p class="article__text">Далее, надо склонировать репозиторий на компьютер. Нажимаем зеленую кнопку
+            <b>Clone or download</b>, а затем, на маленькую серую кнопку справа от адреса, так мы копируем ссылку в
+            буфер
             обмена.</p>
 
             <figure>
@@ -247,7 +327,8 @@
 
             <p class="article__text">Далее пишем <code>git remote -v</code></p>
             <p class="article__text">
-              Так, посмотрим список удаленных репозиториев. Пока здесь только один, наш, который по факту работает как на
+              Так, посмотрим список удаленных репозиториев. Пока здесь только один, наш, который по факту работает как
+              на
               прием так и на отправку (fetch и push).</p>
             <figure>
               <img class="article__img" src="img/git_20.png" width="500" height="353" alt="команда ls">
