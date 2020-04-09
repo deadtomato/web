@@ -82,7 +82,7 @@ a {
 .page-section__hello {
   background-color: #f2798f;
   padding: 67px 0;
-  background-image: url("img/footer-img.png");
+  background-image: url("../img/footer-img.png");
   background-repeat: no-repeat;
   background-position: center 0;
   background-size: 100% 50%;
