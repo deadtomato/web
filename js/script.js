@@ -1,4 +1,3 @@
-
 const template = document.querySelector('#zoom').content.querySelector('.zoom');
 const article = document.querySelector('.article');
 const imgs = article.querySelectorAll('.article__img');
