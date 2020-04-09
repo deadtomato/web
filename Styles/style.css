@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 
 @font-face {
   font-weight: 400;
@@ -123,7 +125,8 @@ blockquote {
 }
 
 .container {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 90%;
   margin: 0 auto;
 }
@@ -150,7 +153,8 @@ blockquote {
   left: 0;
 
   display: none;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
   padding: 20px;
   padding-top: 100px;
@@ -159,7 +163,8 @@ blockquote {
   text-align: center;
 
   background-color: #ffffff;
-  box-shadow: 0 20px 25px -5px gray;
+  -webkit-box-shadow: 0 20px 25px -5px gray;
+          box-shadow: 0 20px 25px -5px gray;
 }
 
 .site-menu__item {
@@ -305,7 +310,8 @@ blockquote {
   bottom: 10px;
 
   display: block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 70px;
   padding: 3px 7px;
 
@@ -322,13 +328,16 @@ blockquote {
   top: 150px;
   left: calc(50% - (96% / 2));
 
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+          box-sizing: border-box;
   max-width: 96%;
   margin: 0 auto;
   padding: 1%;
 
   background-color: #ffffff;
-  box-shadow: 0 0 50px -10px black;
+  -webkit-box-shadow: 0 0 50px -10px black;
+          box-shadow: 0 0 50px -10px black;
 }
 
 .zoom__img {
@@ -354,7 +363,8 @@ blockquote {
   background-color: #ffffff;
   border: none;
   border-radius: 10px;
-  box-shadow: 0 0 20px -5px black;
+  -webkit-box-shadow: 0 0 20px -5px black;
+          box-shadow: 0 0 20px -5px black;
 }
 
 
@@ -375,8 +385,13 @@ blockquote {
   .site-menu {
     position: static;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     width: auto;
     margin-top: 30px;
     /* left: auto;
@@ -384,7 +399,8 @@ blockquote {
     padding: 0;
 
     background-color: transparent;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
 
   .site-menu__item {
@@ -419,16 +435,21 @@ blockquote {
     top: 100%;
     right: 0;
 
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+            box-sizing: border-box;
     width: 370px;
     padding: 20px;
 
     background-color: #ffffff;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    -webkit-box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     visibility: hidden;
   }
 
   .sub-menu__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-bottom: 20px;
   }
@@ -477,16 +498,26 @@ blockquote {
   .article {
     position: relative;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .article__menu {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
 
-    align-self: flex-start;
+    -ms-flex-item-align: start;
+
+        align-self: flex-start;
     width: 280px;
     margin: 0;
     padding: 0;
@@ -498,6 +529,7 @@ blockquote {
   }
 
   .up-btn {
+    position: -webkit-sticky;
     position: sticky;
     right: 0;
     bottom: 20px;
@@ -518,14 +550,28 @@ blockquote {
   }
 
   .article__img {
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    -o-transition: transform 0.3s;
     transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
   }
 
   .article__img:hover,
   .article__img:focus {
-    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+
+    -webkit-transition: -webkit-transform 0.3s;
+
+    transition: -webkit-transform 0.3s;
+
+    -o-transition: transform 0.3s;
 
     transition: transform 0.3s;
+
+    transition: transform 0.3s, -webkit-transform 0.3s;
   }
 
   .article__link:hover,
@@ -543,6 +589,8 @@ blockquote {
   }
 
   .close {
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
   }
 
@@ -551,6 +599,10 @@ blockquote {
     color: white;
 
     background-color: tomato;
+
+    -webkit-transition: all 0.3s;
+
+    -o-transition: all 0.3s;
 
     transition: all 0.3s;
   }
