@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Проект «Котейка»</title>
+    <link rel="preload" href="fonts/open-sans-v17-latin_cyrillic-regular.woff2" as="font" crossorigin="anonymous"/>
+    <link rel="preload" href="fonts/open-sans-v17-latin_cyrillic-italic.woff2" as="font" crossorigin="anonymous"/>
+    <link rel="preload" href="fonts/open-sans-v17-latin_cyrillic-800.woff2" as="font" crossorigin="anonymous"/>
+    <link rel="preload" href="fonts/fira-code-v8-latin_cyrillic-regular.woff2" as="font" crossorigin="anonymous"/>
+    <link rel="preload" href="fonts/fira-code-v8-latin_cyrillic-700.woff2" as="font" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="libs/normalize.css"/>
+    <link rel="stylesheet" href="Styles/style.min.css"/>
+  </head>
+  <body>
+    <header class="page-header">
+      <header class="page-header">
+        <nav class="page-header__nav container"><a class="page-header__btn page-header__btn--open" href="#" aria-label="Открыть меню">
+            <svg width="24" height="24">
+              <use xlink:href="images/sprite.svg#burger-menu"></use>
+            </svg></a>
+          <ul class="site-menu no-list">
+            <li class="site-menu__item site-menu__item--btn"><a class="page-header__btn page-header__btn--close" aria-label="Закрыть меню">
+                <svg width="23" height="23">
+                  <use xlink:href="images/sprite.svg#close-btn"></use>
+                </svg></a></li>
+            <li class="site-menu__item"><a class="site-menu__link" href="index.html">Главная</a>
+            </li>
+            <li class="site-menu__item"><a class="site-menu__link" href="node.html">Конфигурация проекта. Node.js и Gulp</a>
+            </li>
+            <li class="site-menu__item"><a class="site-menu__link" href="git.html">Работа с Git и Github</a>
+            </li>
+            <li class="site-menu__item site-menu__item--projects" tabindex="0"><a class="site-menu__link site-menu__link--projects">
+                <svg width="15" height="20">
+                  <use xlink:href="images/sprite.svg#arrow"></use>
+                </svg><span>Проекты</span></a>
+              <ul class="sub-menu no-list">
+                <li class="sub-menu__item"><a class="sub-menu__link" href="https://github.com/papatomatoe/Barber-site" target="_blank" rel="noopener noreferrer">Barber (github)</a><a class="sub-menu__link" href="https://yadi.sk/d/qzNa1_9ywmrCHQ" target="_blank" rel="noopener noreferrer">Макет (PSD)</a></li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="https://github.com/papatomatoe/Cruises" target="_blank" rel="noopener noreferrer">По чёрному морю (github)</a><a class="sub-menu__link" href="https://www.figma.com/file/RmHouE4qlHALiyIGILEeXr/%D0%9F%D0%BE-%D1%87%D1%91%D1%80%D0%BD%D0%BE%D0%BC%D1%83-%D0%BC%D0%BE%D1%80%D1%8E?node-id=0%3A1" target="_blank" rel="noopener noreferrer">Макет (Figma)</a></li>
+                <li class="sub-menu__item"><a class="sub-menu__link sub-menu__link--current">Котейка</a><a class="sub-menu__link" href="https://www.figma.com/file/oBVAM3fKhJZeotPJNbGDde/hotelcats-Copy?node-id=0%3A1" target="_blank" rel="noopener noreferrer">Макет (Figma)</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </header>
+    <main class="page-content">
+      <div class="container page-content__flex-container">
+        <h1 class="page-content__title">Проект «Котейка»</h1>
+        <button class="page-content__btn page-content__modal-open-btn" type="button">Создать проект</button><a class="page-content__btn page-content__template-btn" href="https://www.figma.com/file/oBVAM3fKhJZeotPJNbGDde/hotelcats-Copy?node-id=0%3A1" target="_blank" rel="noopener noreferrer">Макет</a>
+        <div class="page-content__container">
+          <input class="page-content__radio visually-hidden" id="description" type="radio" name="descRadio" checked="checked"/>
+          <input class="page-content__radio visually-hidden" id="criteries" type="radio" name="descRadio"/>
+          <label class="page-content__radio-btn" for="description">Техническое задание</label>
+          <label class="page-content__radio-btn" for="criteries">Критерии</label>
+          <section class="project project--description page-content__description description">
+            <h2 class="project__title">Техническое задание</h2><ul class="description">
+  <li class="description__item">
+    <h3 class="description__title">1. Общие технические требования</h3>
+    <ul class="description__sub">
+      <li class="description__sub-item">
+        <span class="description__num">1.1. </span>
+        <span class="description__text">Сетка: определена в макете.</span>
+      </li>
+      <li class="description__sub-item"><span class="description__num">1.2.</span>
+        <span class="description__text">Адаптивность сетки: мобильная, планшетная и десктопная версии («фикс» или
+          «резина»).</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">1.3.</span>
+        <span class="description__text">Адаптивность графики: ретинизация, векторные изображения.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">1.4.</span>
+        <span class="description__text">Используемая методология: БЭМ.</span>
+      </li>
+      <li class="description__sub-item"><span class="description__num">1.5.</span>
+        <span class="description__text">Используемый препроцессор: Sass.</span>
+      </li>
+      <li class="description__sub-item"><span class="description__num">1.6.</span>
+        <span class="description__text">Используемый инструмент автоматизации: Gulp.</span>
+      </li>
+      <li class="description__sub-item"><span class="description__num">1.7.</span>
+        <span class="description__text">Кроссбраузерность: Chrome, Firefox, Safari, Edge</span>
+      </li>
+      <li class="description__sub-item"><span class="description__num">1.8.</span>
+        <span class="description__text">Обязательными к вёрстке являются все 3 страницы (главная страница, страница каталога, карточка номера), а так же 2 попапа (форма брони номера и сообщение об успешной отправки формы).</span>
+      </li>
+    </ul>
+  </li>
+
+  <li class="description__item">
+    <h3 class="description__title">2. Пожелания к поведению блоков</h3>
+    <ul class="description__sub">
+      <li class="description__sub-item">
+        <span class="description__num">2.1.</span>
+        <span class="description__text">Между версиями (мобильная, планшетная, десктопная) сетка может быть как
+          резиновой, так и фиксированной.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">2.2.</span>
+        <span class="description__text">При фиксированной сетке контентная область центруется и не может быть уже
+        макетной ширины. Фоны, которые
+        упираются в края макета должны тянуться на всю страницу.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">2.3.</span>
+        <span class="description__text">Логотип на внутренних страницах — это ссылка на главную страницу.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">2.4.</span>
+        <span class="description__text">Мобильное меню может быть реализовано двумя способами:
+        как без JS, так и с использованием JS.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">2.5.</span>
+        <span class="description__text">При реализации без использования JS главное меню в мобильной версии должно
+        быть всегда открыто, а иконка
+        с
+        крестиком — скрыта.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">2.6.</span>
+        <span class="description__text">При реализации с использованием JS блок с главным меню в мобильной версии
+        должен открываться при нажатии
+        на
+        иконку «гамбургера». Когда меню открыто, иконка «гамбургера» заменяется на крестик. При нажатии на иконку с
+        крестиком
+        меню закрывается.</span>
+      </li>
+    </ul>
+  </li>
+
+  <li class="description__item">
+    <h3 class="description__title">3. Форма</h3>
+    <ul class="description__sub">
+      <li class="description__sub-item">
+        <span class="description__num">3.1.</span>
+        <span class="description__text">Должны быть реализованы кастомные элементы форм.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">3.2.</span>
+        <span class="description__text">У полей ввода телефона и почты должны быть указаны соответствующие типы для
+        удобного заполнения с
+        телефона.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">3.3.</span>
+        <span class="description__text">При попытке отправить форму, в которой поля для ввода телефона или почты
+        заполнены данными в неподходящем
+        формате, появляется встроенное в браузер сообщение об ошибке.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">3.4.</span>
+        <span class="description__text">Кнопка «Забронировать» вызывает появление модального окна для оформления брони.
+        При отключенном JS должен осуществляться переход на страницу оформления заказа (страницу
+        оформления заказа реализовывать не нужно).</span>
+      </li>
+    </ul>
+  </li>
+
+</ul>
+          </section>
+          <section class="project project--criteries page-content__criteries description">
+            <h2 class="project__title">Критерии</h2><ul class="description">
+  <li class="description__item">
+    <h3 class="description__title">Разметка</h3>
+    <ul class="description__sub">
+      <li class="description__sub-item">
+        <span class="description__num">1.</span>
+        <span class="description__text">Выполнена HTML-разметка всех страниц
+          проекта и всех элементов на этих страницах.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">2.</span>
+        <span class="description__text">Грубые ошибки в разметке отсутствуют.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">3.</span>
+        <span class="description__text">Документ проходит проверку на валидность <a href="https://validator.w3.org"
+            target="_blank" rel="noopener noreferrer">validator.w3.org</a>.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">4.</span>
+        <span class="description__text">В разметке отсутствует дублирование кода для одного и того же элемента, с
+          помощью которого элемент
+          отображается в разных местах страницы на разных версиях: мобильной, десктопной, планшетной. Этот критерий не
+          касается элементов, которые скрываются или показываются в разных версиях.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">5.</span>
+        <span class="description__text">Отсутствуют типовые ошибки в разметке по методологии.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">6.</span>
+        <span class="description__text">Названия полей форм привязаны к своим полям с помощью <code>&lt;label&gt;</code>.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">7.</span>
+        <span class="description__text">У всех изображений размер прописан в теге <code>&lt;img&gt;</code>, у встроенных
+          SVG-изображений размер прописан в теге <code>&lt;svg&gt;</code></span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">8.</span>
+        <span class="description__text">Использовано минимально возможное количество HTML-элементов (нет лишних
+          элементов).</span>
+      </li>
+    </ul>
+  </li>
+
+  <li class="description__item">
+    <h3 class="description__title">Стилизация</h3>
+    <ul class="description__sub">
+      <li class="description__sub-item">
+        <span class="description__num">1.</span>
+        <span class="description__text">Раскладка блоков на странице сделана с помощью флексбоксов.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">2.</span>
+        <span class="description__text">В CSS отсутствует <code>!important</code>.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">3.</span>
+        <span class="description__text">Подключены правильные шрифты, их размеры, цвет и толщина равны соответствующим
+          параметрам в макетах и
+          техническом задании.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">4.</span>
+        <span class="description__text">Нестандартные шрифты подключены локально. Формат шрифтов должен быть <b>woff</b> и
+          <b>woff2</b>.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">5.</span>
+        <span class="description__text">Указаны альтернативные варианты шрифта и тип семейства в конце перечисления
+          <code>font-family</code>.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">6.</span>
+        <span class="description__text">При наполнении контентом (как в макете) элементы каждой версии страницы
+          (мобильной, планшетной и десктопной)
+          соответствуют макету.</span></li>
+      <li class="description__sub-item">
+        <span class="description__num">7.</span>
+        <span class="description__text">Для стилизации не использованы <code>#id</code></span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">8.</span>
+        <span class="description__text">Для блока, у которого есть фоновое изображение, прописан фоновый цвет, который
+          соответствует преобладающему
+          цвету изображения (пока изображение не загружено, страница выглядит похоже на макет).</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">9.</span>
+        <span class="description__text">Нет глобальных стилей тегов.</span>
+      </li>
+    </ul>
+  </li>
+
+  <li class="description__item">
+    <h3 class="description__title">CSS-препроцессор</h3>
+    <ul class="description__sub">
+      <li class="description__sub-item">
+        <span class="description__num">1.</span>
+        <span class="description__text">Использован CSS-препроцессор.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">2.</span>
+        <span class="description__text">Код стилей должен быть разбит на несколько частей.</span>
+      </li>
+    </ul>
+  </li>
+
+  <li class="description__item">
+    <h3 class="description__title">Адаптивность</h3>
+    <ul class="description__sub">
+      <li class="description__sub-item">
+        <span class="description__num">1.</span>
+        <span class="description__text">Выполнена вёрстка трёх состояний каждой страницы: мобильной, планшетной и
+          десктопной.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">2.</span>
+        <span class="description__text">В разметке есть правильный вьюпорт тег.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">3.</span>
+        <span class="description__text">Для микросеток использованы флексбоксы.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">4.</span>
+        <span class="description__text">Логотип должен адаптироваться.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">5.</span>
+        <span class="description__text">Выполнено кадрирование контентных изображений.</span>
+      </li>
+    </ul>
+  </li>
+
+  <li class="description__item">
+    <h3 class="description__title">Графика</h3>
+    <ul class="description__sub">
+      <li class="description__sub-item">
+        <span class="description__num">1.</span>
+        <span class="description__text">Использована векторная графика.</span>
+      </li>
+    </ul>
+  </li>
+
+  <li class="description__item">
+    <h3 class="description__title">Сборка проекта</h3>
+    <ul class="description__sub">
+      <li class="description__sub-item">
+        <span class="description__num">1.</span>
+        <span class="description__text">Процесс сборки проекта настроен с помощью <b>Gulp</b></span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">2.</span>
+        <span class="description__text">Все зависимости проекта должны быть указаны в файле <b>package.json</b>. Команда <code>npm i</code>
+          должна установить всё
+          необходимое для того, чтобы сборка проекта работала.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">3.</span>
+        <span class="description__text">Сборка проекта запускается командами <code>npm run build</code> и <code>npm start</code></span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">4.</span>
+        <span class="description__text">В результате сборки должна получаться папка <b>build</b> со всеми необходимыми
+          файлами.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">5.</span>
+        <span class="description__text">Папка <b>build</b> со всем её содержимым не должна попадать в Гитхаб.</span>
+      </li>
+    </ul>
+  </li>
+
+  <li class="description__item">
+    <h3 class="description__title">Тестирование</h3>
+    <ul class="description__sub">
+      <li class="description__sub-item">
+        <span class="description__num">1.</span>
+        <span class="description__text">Вёрстка проходит тест на переполнение контентом.</span>
+      </li>
+    </ul>
+  </li>
+
+  <li class="description__item">
+    <h3 class="description__title">Доступность</h3>
+    <ul class="description__sub">
+      <li class="description__sub-item">
+        <span class="description__num">1.</span>
+        <span class="description__text">
+          У интерактивных элементов при нажатии или фокусе с клавиатуры есть активное состояние.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">2.</span>
+        <span class="description__text">Все интерактивные элементы имеют текстовое описание.</span>
+      </li>
+    </ul>
+  </li>
+
+  <li class="description__item">
+    <h3 class="description__title">Оптимизация</h3>
+    <ul class="description__sub">
+      <li class="description__sub-item">
+        <span class="description__num">1.</span>
+        <span class="description__text">Использованы изображения в формате <b>WebP</b>.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">2.</span>
+        <span class="description__text">Использован векторный спрайт.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">3.</span>
+        <span class="description__text">Произведена оптимизация загрузки шрифтов.</span>
+      </li>
+    </ul>
+  </li>
+
+  <li class="description__item">
+    <h3 class="description__title">Разное</h3>
+    <ul class="description__sub">
+      <li class="description__sub-item">
+        <span class="description__num">1.</span>
+        <span class="description__text">Вёрстка идентично отображается в последних версиях браузеров Chrome, Firefox,
+          Safari, Edge, Internet Explorer.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">2.</span>
+        <span class="description__text">Единообразное написание и форматирование кода в HTML, файлах CSS-препроцессора и
+          JavaScript (включая файлы
+          автоматизации).</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">3.</span>
+        <span class="description__text">Отсутствует транслит в названиях классов, атрибутах, переменных
+          CSS-препроцессора, названиях примесей и так
+          далее.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">4.</span>
+        <span class="description__text">Мобильное меню должно быть работоспособным при отключённом JavaScript.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">5.</span>
+        <span class="description__text">Проект соответствует техническому заданию.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">6.</span>
+        <span class="description__text">При взаимодействии с элементами (наведение, нажатие) ни сам элемент, ни
+          окружающие его блоки не меняют своего
+          положения.
+        </span>
+      </li>
+    </ul>
+  </li>
+</ul>
+          </section>
+        </div><a class="up-btn" href="#" aria-label="К началу страницы">Вверх</a>
+      </div>
+    </main>
+    <footer class="page-footer"></footer>
+    <div class="modal">
+      <button class="modal__close" type="button">
+        <svg width="24" height="24">
+          <use xlink:href="images/sprite.svg#close-btn"></use>
+        </svg>
+      </button>
+      <form class="modal__form" action="#" method="get">
+        <fieldset class="modal__fieldset">
+          <legend class="modal__legend visually-hidden">Создание репозитория</legend>
+          <label class="modal__field"><span class="modal__label">Имя</span>
+            <input class="modal__input" type="text" name="firstName" id="firstNameField" minlength="2" maxlength="25" pattern="^[A-Za-zА-Яа-я]{2,25}$" placeholder="Алексей" require="require"/>
+          </label>
+          <label class="modal__field"><span class="modal__label">Фамилия</span>
+            <input class="modal__input" type="text" name="lastName" id="lastNameField" minlength="2" maxlength="25" pattern="^[A-Za-zА-Яа-я]{2,25}$" placeholder="Алексеев" require="require"/>
+          </label>
+        </fieldset>
+        <button class="modal__btn" type="submit">Создать репозиторий!</button>
+        <button class="modal__reset" type="reset">Сбросить</button>
+      </form>
+    </div>
+    <div class="bg"></div>
+    <script src="js/main-menu.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/github.js"></script>
+  </body>
+</html>
