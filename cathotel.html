@@ -50,10 +50,177 @@
         <h1 class="page-content__title">Проект «Котейка»</h1>
         <button class="page-content__btn page-content__modal-open-btn" type="button">Создать проект</button><a class="page-content__btn page-content__template-btn" href="https://www.figma.com/file/oBVAM3fKhJZeotPJNbGDde/hotelcats-Copy?node-id=0%3A1" target="_blank" rel="noopener noreferrer">Макет</a>
         <div class="page-content__container">
-          <input class="page-content__radio visually-hidden" id="description" type="radio" name="descRadio" checked="checked"/>
+          <input class="page-content__radio visually-hidden" id="tasks" type="radio" name="descRadio" checked="checked"/>
+          <input class="page-content__radio visually-hidden" id="description" type="radio" name="descRadio"/>
           <input class="page-content__radio visually-hidden" id="criteries" type="radio" name="descRadio"/>
+          <label class="page-content__radio-btn" for="tasks">Задания</label>
           <label class="page-content__radio-btn" for="description">Техническое задание</label>
           <label class="page-content__radio-btn" for="criteries">Критерии</label>
+          <section class="project project--description page-content__tasks description">
+            <input class="page-content__check visually-hidden" id="instruction" type="checkbox" name="instruction"/>
+            <label class="page-content__instruction-btn" for="instruction"> <span>Как работать над проектом</span>
+              <svg width="15" height="20">
+                <use xlink:href="images/sprite.svg#arrow"></use>
+              </svg>
+            </label>
+            <div class="page-content__instruction-container"><ul class="description description--instruction">
+  <li class="description__item">
+    <p><span class="description__num">1.</span> На сайте <a href="https://deadtomato.github.io/web" target="_blank"
+        rel="noopener noreferrer">deadtomato.github.io/web</a> кликаем по ссылек <b>“Котейка”</b></p>
+    <p>Тут же можно нажать на ссылке <b>“Макет”</b>, чтобы посмотреть на макет сайта, который необходимо сверстать</p>
+    <p class="description__example">Обратите внимание, все версии проекта представлены на панели слева в разделе
+      <b>Pages</b></p>
+  </li>
+
+  <li class="description__item">
+    <p><span class="description__num">2.</span> На странице проекта можно ознакомиться с <b>Техническим заданием и
+        Критериями качества</b>.</p>
+    <p>Кроме того, на первой вкладке расположены <b>Модули заданий</b>, которые необходимо будет выполнять в той
+      последовательности, в которой они представлены здесь. К заданиям мы еще вернемся, а пока нам надо сгенерировать
+      мастер-репозиторий.</p>
+  </li>
+
+  <li class="description__item">
+    <p><span class="description__num">3.</span> Нажимаем на кнопку <b>Создать проект</b>, открывается модальное окно.
+      Здесь надо ввести <b>имя</b> и <b>фамилию</b></p>
+    <p class="description__example">Имя и фамилия должны быть реальные, прочее будет удалено!</p>
+    <p>Жмем на кнопку <b>Создать репозиторий</b>. Появляется ссылка, кликаем!</p>
+  </li>
+
+  <li class="description__item">
+    <p><span class="description__num">4.</span> Попадаем на страницу с мастер репозиторием. Нам надо сделать форк!
+      Нажимаем кнопку <b>Fork</b>, создается форк репозитория, и автоматически перенаправляет в наш аккаунт.</p>
+
+    <p>Клонируем репозиторий на компьютер, нажимаем кнопке <b>Clone or download</b>, копируем URL и в консоли пишем:</p>
+    <p><code>git clone &lt;ссылка на форк&gt;</code></p>
+  </li>
+
+  <li class="description__item">
+    <p><span class="description__num">5.</span> Теперь надо добавить ссылку на мастер-репозиторий:</p>
+    <p><code>git remote add main &lt;ссылка на мастер-репозиторий&gt;</code>
+      <p>Проверяем:</p>
+      <p><code>git remote -v</code></p>
+  </li>
+
+  <li class="description__item">
+    <p><span class="description__num">6.</span> Можно выполнять задания. Создаем ветку первого задания:</p>
+    <p><code>git checkout -b task-1</code></p>
+    <p>После того как задание выполнено, надо закоммитеть изменения и запушить в форк.</p>
+    <p class="description__example">Можно добавлять и коммитить каждый файл, а можно все сразу, делайте как вам удобно.
+    </p>
+    <p><code>git add .</code></p>
+    <p><code>git commit -m “Описание коммита”</code></p>
+    <p><code>git push origin task-1</code></p>
+  </li>
+
+  <li class="description__item">
+    <p><span class="description__num">7.</span> Теперь в интерфейсе <b>Github</b> видим коммит, тут же кнопка создания
+      пулреквеста, нажимаем, создаем и ждем проверки!</p>
+  </li>
+
+  <li class="description__item">
+    <p><span class="description__num">8.</span> Если есть замечания, необходимо их исправить, для этого возвращаемся в
+      редактор.</p>
+    <p class="description__example">Надо убедиться, что мы на нужной ветке!</p>
+    <p>Исправляем! И снова делаем коммит и пушим в форк.</p>
+    <p><code>git add .</code></p>
+    <p><code>git commit -m “Описание коммита”</code></p>
+    <p><code>git push origin task-1</code></p>
+    <p class="description__example">При этом не надо создавать новый пулреквест, если запушили в ту же ветку из которой
+      создавали пулреквест, изменения
+      автоматически попадут в пулреквест.</p>
+  </li>
+
+  <li class="description__item">
+    <p><span class="description__num">9.</span> Когда все хорошо и пулреквест принят, а изменения смержены в
+      мастер-репозиторий, надо забрать их и отправить в ветку <b>master</b> нашего форка!</p>
+    <p>Идем в консоль. Переключаемся на ветку <b>master</b>:</p>
+    <p><code>git checkout master</code></p>
+    <p>Забираем изменения из мастер-репозитория:</p>
+    <p><code>git pull main master</code></p>
+    <p>И отправляем в форк:</p>
+    <p><code>git push origin master</code></p>
+  </li>
+
+  <li class="description__item">
+    <p><span class="description__num">10.</span> Можно приступить к выполнению второго задания.</p>
+    <p>Создаем ветку <b>task-2</b>:</p>
+    <p><code>git checkout -b task-2</code></p>
+    <p>Выполняем, коммит, пуш в форк в ветку <b>task-2</b>, делаем ПР и так по кругу!</p>
+  </li>
+</ul>
+
+            </div>
+            <h2 class="project__title">Задания</h2><ul class="description">
+  <li class="description__item">
+    <h3 class="description__title">1. Подготовка к работе</h3>
+    <ul class="description__sub">
+      <li class="description__sub-item">
+        <span class="description__num">1.</span>
+        <span class="description__text">Сделайте форк проекта</span>
+      </li>
+
+      <li class="description__sub-item">
+        <span class="description__num">2.</span>
+        <span class="description__text">Затем, клонируйте свой репозиторий (форк) проекта к себе на компьютер.</span>
+      </li>
+
+      <li class="description__sub-item">
+        <span class="description__num">3.</span>
+        <span class="description__text">Создайте ветку <b>task1</b> в склонированном проекте.</span>
+      </li>
+
+      <li class="description__sub-item">
+        <span class="description__num">4.</span>
+        <span class="description__text">В этой ветке инициализируйте npm-пакет.</span>
+      </li>
+
+      <li class="description__sub-item">
+        <span class="description__num">5.</span>
+        <span class="description__text">Установите <b>gulp</b> и плагины <b>(gulp-sass, gulp-plumber, gulp-postcss, gulp-sourcemaps, autoprefixer,browser-sync)</b></span>
+      </li>
+
+      <li class="description__sub-item">
+        <span class="description__num">6.</span>
+        <span class="description__text">Создайте и сконфигурируйти <b>gulpfile.js</b></span>
+      </li>
+
+      <li class="description__sub-item">
+        <span class="description__num">7.</span>
+        <span class="description__text">Напишите скрипты в <b>packages.json</b></span>
+      </li>
+
+      <li class="description__sub-item">
+        <span class="description__num">8.</span>
+        <span class="description__text">Создайте структуру проекта в папке <b>source</b>. В пустых папках <b>img</b>, <b>fonts</b> и т.д. создайте файл <b>README</b> <b>(БЕЗ РАСШИРЕНИЯ!)</b>, в котором укажите, что должно быть в этой папке.</span>
+        <span class="description__example">К примеру, в папке <b>img</b> должен лежать файл <b>README</b> с текстом: <i>"Папка для изображений"</i></span>
+      </li>
+
+      <li class="description__sub-item">
+        <span class="description__num">9.</span>
+        <span class="description__text">Создайте в source файл <b>index.html</b>. Создайте базовую разметку. В <b>body</b> создайте заголовок первого уровня с текстом <i>Hello world!</i></span>
+      </li>
+
+      <li class="description__sub-item">
+        <span class="description__num">10.</span>
+        <span class="description__text">Выполните тестовый запуск локального сервера, для проверки результата.</span>
+      </li>
+
+      <li class="description__sub-item">
+        <span class="description__num">11.</span>
+        <span class="description__text">Создайте пулреквест из ветки <b>task1</b> вашего форка в мастер-репозиторий.</span>
+      </li>
+
+      <li class="description__sub-item">
+        <span class="description__example">Если требуются дополнительные изменения, то их нужно вносить в ветке из которой создан пулреквест. Новый пулреквест создавать не нужно. Все изменения автоматически появятся в уже созданном пулреквесте.</span>
+      </li>
+
+    </ul>
+  </li>
+</ul>
+
+
+          </section>
           <section class="project project--description page-content__description description">
             <h2 class="project__title">Техническое задание</h2><ul class="description">
   <li class="description__item">
