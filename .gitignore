@@ -6,13 +6,14 @@
 *.pdf
 *.psd
 *.sublime*
-package-lock.json
 node_modules/
 
 npm-debug.*
 Thumbs.db
 
-source/
 backups/
-gulpfile.js
-package.json
+build/
+old/
+sourse/opt-img/
+sourse/opt-svg/
+
