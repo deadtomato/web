@@ -1,0 +1,26 @@
+include ../modules/mixins
+
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+  include ../modules/head
+
+  body
+    header.page-header
+      include ../modules/header
+    main.page-content
+      div.container.page-content__flex-container
+        h1.page-content__title=pageTitle
+        block content
+
+        a(href="#", class="up-btn", aria-label="К началу страницы") Вверх
+    footer.page-footer
+
+
+    block modal
+    block bg
+
+    script(src="js/main-menu.js")
+    script(src="js/modal.js")
+    script(src="js/github.js")

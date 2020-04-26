@@ -1,0 +1,106 @@
+<ul class="description">
+  <li class="description__item">
+    <h3 class="description__title">1. Общие технические требования</h3>
+    <ul class="description__sub">
+      <li class="description__sub-item">
+        <span class="description__num">1.1. </span>
+        <span class="description__text">Сетка: определена в макете.</span>
+      </li>
+      <li class="description__sub-item"><span class="description__num">1.2.</span>
+        <span class="description__text">Адаптивность сетки: мобильная, планшетная и десктопная версии («фикс» или
+          «резина»).</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">1.3.</span>
+        <span class="description__text">Адаптивность графики: ретинизация, векторные изображения.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">1.4.</span>
+        <span class="description__text">Используемая методология: БЭМ.</span>
+      </li>
+      <li class="description__sub-item"><span class="description__num">1.5.</span>
+        <span class="description__text">Используемый препроцессор: Sass.</span>
+      </li>
+      <li class="description__sub-item"><span class="description__num">1.6.</span>
+        <span class="description__text">Используемый инструмент автоматизации: Gulp.</span>
+      </li>
+      <li class="description__sub-item"><span class="description__num">1.7.</span>
+        <span class="description__text">Кроссбраузерность: Chrome, Firefox, Safari, Edge</span>
+      </li>
+      <li class="description__sub-item"><span class="description__num">1.8.</span>
+        <span class="description__text">Обязательными к вёрстке являются все 3 страницы (главная страница, страница каталога, карточка номера), а так же 2 попапа (форма брони номера и сообщение об успешной отправки формы).</span>
+      </li>
+    </ul>
+  </li>
+
+  <li class="description__item">
+    <h3 class="description__title">2. Пожелания к поведению блоков</h3>
+    <ul class="description__sub">
+      <li class="description__sub-item">
+        <span class="description__num">2.1.</span>
+        <span class="description__text">Между версиями (мобильная, планшетная, десктопная) сетка может быть как
+          резиновой, так и фиксированной.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">2.2.</span>
+        <span class="description__text">При фиксированной сетке контентная область центруется и не может быть уже
+        макетной ширины. Фоны, которые
+        упираются в края макета должны тянуться на всю страницу.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">2.3.</span>
+        <span class="description__text">Логотип на внутренних страницах — это ссылка на главную страницу.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">2.4.</span>
+        <span class="description__text">Мобильное меню может быть реализовано двумя способами:
+        как без JS, так и с использованием JS.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">2.5.</span>
+        <span class="description__text">При реализации без использования JS главное меню в мобильной версии должно
+        быть всегда открыто, а иконка
+        с
+        крестиком — скрыта.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">2.6.</span>
+        <span class="description__text">При реализации с использованием JS блок с главным меню в мобильной версии
+        должен открываться при нажатии
+        на
+        иконку «гамбургера». Когда меню открыто, иконка «гамбургера» заменяется на крестик. При нажатии на иконку с
+        крестиком
+        меню закрывается.</span>
+      </li>
+    </ul>
+  </li>
+
+  <li class="description__item">
+    <h3 class="description__title">3. Форма</h3>
+    <ul class="description__sub">
+      <li class="description__sub-item">
+        <span class="description__num">3.1.</span>
+        <span class="description__text">Должны быть реализованы кастомные элементы форм.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">3.2.</span>
+        <span class="description__text">У полей ввода телефона и почты должны быть указаны соответствующие типы для
+        удобного заполнения с
+        телефона.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">3.3.</span>
+        <span class="description__text">При попытке отправить форму, в которой поля для ввода телефона или почты
+        заполнены данными в неподходящем
+        формате, появляется встроенное в браузер сообщение об ошибке.</span>
+      </li>
+      <li class="description__sub-item">
+        <span class="description__num">3.4.</span>
+        <span class="description__text">Кнопка «Забронировать» вызывает появление модального окна для оформления брони.
+        При отключенном JS должен осуществляться переход на страницу оформления заказа (страницу
+        оформления заказа реализовывать не нужно).</span>
+      </li>
+    </ul>
+  </li>
+
+</ul>

@@ -1,0 +1,26 @@
+.up-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 10px;
+
+  display: block;
+  box-sizing: border-box;
+  width: 70px;
+  padding: 3px 7px;
+
+  text-align: center;
+  color: #d9b779;
+
+  background-color: #494859;
+  border: 1px solid #353340;
+  border-radius: 5px;
+}
+
+@media (min-width: 1120px) {
+  .up-btn {
+    position: sticky;
+    right: 0;
+    bottom: 20px;
+    left: 0;
+  }
+}

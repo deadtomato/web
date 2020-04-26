@@ -1,0 +1,20 @@
+extends ../layout/article
+
+block variables
+  - var pageTitle = 'Конфигурация проекта. Node.js и Gulp'
+  - var href = 'node.html'
+  - var articleParts = [{id: 'nodejs', name: 'Node.js'}, {id: 'npminit', name: 'Инициализация npm-пакета'}, {id: 'gulpinstall', name: 'Установка Gulp'}, {id: 'proj', name: 'Структура проекта'}, {id: 'plugins', name: 'Устанавливаем Gulp-плагины'}, {id: 'tasks', name: 'Пишем tasks'}, {id: 'start', name: 'Запускаем сервер'}]
+
+block content
+  article.article
+    h2.visually-hidden Автоматизация
+
+    ul.article__menu.no-list
+      for item in articleParts
+        +articleNavItem (item.id, item.name)
+      li.article__menu-item
+        a(href="https://youtu.be/WXc72Ao1mto" target="_blank" rel="noopener noreferrer" class="article__menu-link article__menu-link--external") Установка настройка Cmder (видео)
+      li.article__menu-item
+        a(href="https://youtu.be/HQ1J_XjfnYA" target="_blank" rel="noopener noreferrer" class="article__menu-link article__menu-link--external") Установка настройка Node.js и Gulp (видео)
+    
+    include ./articles/node.html

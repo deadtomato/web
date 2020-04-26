@@ -1,0 +1,17 @@
+include ../modules/mixins
+
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+  include ../modules/head
+
+  body
+    header.page-header
+    main.page-content
+      div.container
+        .page-content__wrapper
+          h1.page-content__title=pageTitle
+          block content
+
+    footer.page-footer

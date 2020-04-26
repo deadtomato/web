@@ -1,0 +1,43 @@
+.close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  display: block;
+  width: 100px;
+  padding: 5px;
+
+  font-weight: 800;
+  font-size: 12px;
+  color: #000000;
+
+  background-color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 20px -5px black;
+}
+
+@media (min-width: 1120px) {
+  .close {
+    top: 20px;
+    right: 30px;
+  }
+
+
+  .close {
+    transition: all 0.3s;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: white;
+
+    background-color: tomato;
+
+    transition: all 0.3s;
+  }
+
+  .close:active {
+    opacity: 0.8;
+  }
+}

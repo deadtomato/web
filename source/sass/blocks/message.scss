@@ -1,0 +1,31 @@
+.message {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 15px 20px;
+box-sizing: border-box;
+  font-weight: 400;
+  text-align: center;
+  color: tomato;
+
+
+  &--anchor {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    color: teal;
+    margin-top: 15px;
+    text-decoration: underline;
+    &:focus,
+    &:hover {
+      opacity: 0.7;
+    }
+  
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+}

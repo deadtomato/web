@@ -1,0 +1,59 @@
+body {
+  position: relative;
+
+  min-width: 320px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Open Sans", Arial, sans-serif;
+  color: #353340;
+  font-style: normal;
+
+  background-color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+code {
+  display: inline-block;
+  padding: 0 10px;
+
+  font-weight: 400;
+  font-family: "Fira Code", "Courier New", monospace;
+  color: #253fb1;
+  font-style: normal;
+  word-break: break-all;
+
+  background-color: #e8eaf7;
+  border: 1px solid #a6b6fb;
+  border-radius: 3px;
+}
+
+b {
+  word-break: break-word;
+}
+
+figure {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+.no-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}

@@ -1,0 +1,11 @@
+.container {
+  box-sizing: border-box;
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1120px) {
+  .container {
+    width: 980px;
+  }
+}

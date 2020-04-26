@@ -1,0 +1,49 @@
+@font-face {
+  font-weight: 400;
+  font-family: "Open Sans";
+  font-style: normal;
+
+  font-display: swap;
+  src: url("../fonts/open-sans-v17-latin_cyrillic-regular.woff2") format("woff2"),
+  url("../fonts/open-sans-v17-latin_cyrillic-regular.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: "Open Sans";
+  font-style: italic;
+
+  font-display: swap;
+  src: url("../fonts/open-sans-v17-latin_cyrillic-italic.woff2") format("woff2"),
+  url("../fonts/open-sans-v17-latin_cyrillic-italic.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 800;
+  font-family: "Open Sans";
+  font-style: normal;
+
+  font-display: swap;
+  src: url("../fonts/open-sans-v17-latin_cyrillic-800.woff2") format("woff2"),
+  url("../fonts/open-sans-v17-latin_cyrillic-800.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: "Fira Code";
+  font-style: normal;
+
+  font-display: swap;
+  src: url("../fonts/fira-code-v8-latin_cyrillic-regular.woff2") format("woff2"),
+  url("../fonts/fira-code-v8-latin_cyrillic-regular.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "Fira Code";
+  font-style: normal;
+
+  font-display: swap;
+  src: url("../fonts/fira-code-v8-latin_cyrillic-700.woff2") format("woff2"),
+  url("../fonts/fira-code-v8-latin_cyrillic-700.woff") format("woff");
+}

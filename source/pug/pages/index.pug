@@ -1,0 +1,31 @@
+extends ../layout/main
+
+block variables
+  - var pageTitle = 'web'
+  - var href = 'index.html' 
+
+block content
+  ul.page-content__menu.no-list
+    li.page-content__item
+      a.page-content__link(href="node.html") Конфигурация проекта. Node.js и Gulp
+
+    li.page-content__item
+      a.page-content__link(href="git.html") Работа с Git и Github
+
+    li.page-content__item.page-content__item--projects
+      a.page-content__link Проекты:
+
+      ul.page-content__sub-menu.no-list
+        li.page-content__sub-item
+          a.page-content__sub-link.page-content__sub-link--git(href="https://github.com/papatomatoe/Barber-site" target="_blank" rel="noopener noreferrer") Barber (Github)
+          a.page-content__sub-link.page-content__sub-link--layout(href="https://yadi.sk/d/qzNa1_9ywmrCHQ" target="_blank" rel="noopener noreferrer") Макет (PSD)
+
+        li.page-content__sub-item
+          a.page-content__sub-link.page-content__sub-link--git(href="https://github.com/papatomatoe/Cruises" target="_blank" rel="noopener noreferrer") По чёрному морю (Github)
+          a.page-content__sub-link.page-content__sub-link--layout(href="https://www.figma.com/file/RmHouE4qlHALiyIGILEeXr/%D0%9F%D0%BE-%D1%87%D1%91%D1%80%D0%BD%D0%BE%D0%BC%D1%83-%D0%BC%D0%BE%D1%80%D1%8E?node-id=0%3A1" target="_blank" rel="noopener noreferrer") Макет (Figma)
+
+        li.page-content__sub-item
+          a.page-content__sub-link.page-content__sub-link--git.page-content__sub-link--modal(href="cathotel.html") Котейка
+          a.page-content__sub-link.page-content__sub-link--layout(href="https://www.figma.com/file/oBVAM3fKhJZeotPJNbGDde/hotelcats-Copy?node-id=0%3A1" target="_blank" rel="noopener noreferrer") Макет (Figma)
+      
+      

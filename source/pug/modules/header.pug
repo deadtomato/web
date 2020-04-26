@@ -1,0 +1,40 @@
+- var pages = [{name: 'Главная', href: 'index.html'},{name: 'Конфигурация проекта. Node.js и Gulp', href: 'node.html'}, { name: 'Работа с Git и Github', href: 'git.html'}]
+- var projects = [{name: 'Котейка', href: 'cathotel.html'}]
+
+header.page-header
+
+  nav.page-header__nav.container
+    a(class="page-header__btn page-header__btn--open", href="#", aria-label="Открыть меню")
+      svg(width="24", height="24")
+        use(xlink:href="img/sprite.svg#burger-menu")
+
+    ul(class="site-menu no-list")
+      li(class="site-menu__item site-menu__item--btn")
+        a(class="page-header__btn page-header__btn--close", aria-label="Закрыть меню")
+          svg(width="23", height="23")
+            use(xlink:href="img/sprite.svg#close-btn")
+
+      for page in pages
+        +menuItem(page.name, page.href, href)
+      li(class="site-menu__item site-menu__item--projects" tabindex="0")
+        a(class="site-menu__link site-menu__link--projects")
+          svg(width="15", height="20")
+            use(xlink:href="img/sprite.svg#arrow")
+          span Проекты
+
+        ul(class="sub-menu no-list")
+          li(class="sub-menu__item")
+            a(class="sub-menu__link", href="https://github.com/papatomatoe/Barber-site", target="_blank", rel="noopener noreferrer") Barber (github)
+            a(class="sub-menu__link", href="https://yadi.sk/d/qzNa1_9ywmrCHQ", target="_blank", rel="noopener noreferrer") Макет (PSD)
+          li(class="sub-menu__item")
+            a(class="sub-menu__link", href="https://github.com/papatomatoe/Cruises", target="_blank", rel="noopener noreferrer") По чёрному морю (github)
+            a(class="sub-menu__link", href="https://www.figma.com/file/RmHouE4qlHALiyIGILEeXr/%D0%9F%D0%BE-%D1%87%D1%91%D1%80%D0%BD%D0%BE%D0%BC%D1%83-%D0%BC%D0%BE%D1%80%D1%8E?node-id=0%3A1", target="_blank" rel="noopener noreferrer") Макет (Figma)
+
+          li(class="sub-menu__item")
+            for project in projects
+              if (href == project.href)
+                a(class="sub-menu__link sub-menu__link--current")=project.name
+              else
+                a(class="sub-menu__link", href=project.href)=project.name
+            a(class="sub-menu__link", href="https://www.figma.com/file/oBVAM3fKhJZeotPJNbGDde/hotelcats-Copy?node-id=0%3A1", target="_blank" rel="noopener noreferrer") Макет (Figma)
+              

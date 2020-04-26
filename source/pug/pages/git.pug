@@ -1,0 +1,20 @@
+extends ../layout/article
+
+block variables
+  - var pageTitle = 'Работа с Git и Github'
+  - var href = 'git.html' 
+  - var articleParts = [{id: 'checkgit', name: 'Проверяем Git'}, {id: 'gitmac', name: 'Установка Git на Mac'}, {id: 'reggithub', name: 'Регистрируемся на Github'}, {id: 'configgit', name: 'Конфигурация Git'}, {id: 'forkclone', name: 'Форк и клонирование репозитория'}, {id: 'devdep', name: 'Установка зависимостей'}, {id: 'valid', name: 'Валидация index.html'}, {id: 'commitpush', name: 'Коммит и Пуш'}]
+
+block content
+  article.article
+    h2.visually-hidden Автоматизация
+
+    ul.article__menu.no-list
+      for item in articleParts
+        +articleNavItem (item.id, item.name)
+      li.article__menu-item
+        a(href="https://youtu.be/F2PF6J-YYo4" target="_blank" rel="noopener noreferrer" class="article__menu-link article__menu-link--external") Регистрация на Github (Видео)
+      li.article__menu-item
+        a(href="https://youtu.be/N_t02qQdE9I" target="_blank" rel="noopener noreferrer" class="article__menu-link article__menu-link--external") Работа c Git (видео)
+    
+    include ./articles/git.html

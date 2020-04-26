@@ -1,0 +1,53 @@
+extends ../layout/project
+
+block variables
+  - var pageTitle = 'Проект «Котейка»'
+  - var href = 'cathotel.html'
+
+block content
+  button.page-content__btn.page-content__modal-open-btn(type="button") Создать проект
+  a.page-content__btn.page-content__template-btn(href="https://www.figma.com/file/oBVAM3fKhJZeotPJNbGDde/hotelcats-Copy?node-id=0%3A1" target="_blank" rel="noopener noreferrer") Макет
+  .page-content__container
+    input#tasks.page-content__radio.visually-hidden(type="radio", name="descRadio" checked)
+    input#description.page-content__radio.visually-hidden(type="radio", name="descRadio")
+    input#criteries.page-content__radio.visually-hidden(type="radio", name="descRadio")
+    label.page-content__radio-btn(for="tasks") Задания
+    label.page-content__radio-btn(for="description") Техническое задание
+    label.page-content__radio-btn(for="criteries") Критерии
+    section.project.project--description.page-content__tasks.description
+      input#instruction.page-content__check.visually-hidden(type="checkbox" name="instruction")
+      label.page-content__instruction-btn(for="instruction") 
+        span Как работать над проектом
+        svg(width="15", height="20")
+            use(xlink:href="img/sprite.svg#arrow")
+      div.page-content__instruction-container
+        include ./articles/instruction.html
+      
+      h2.project__title Задания
+      include ./articles/tasks.html
+    section.project.project--description.page-content__description.description
+      h2.project__title Техническое задание
+      include ./articles/description.html
+    section.project.project--criteries.page-content__criteries.description
+      h2.project__title Критерии
+      include ./articles/criteries.html
+
+block modal
+  .modal
+    button.modal__close(type="button")
+      svg(width="24" height="24")
+        use(xlink:href="img/sprite.svg#close-btn")
+    form.modal__form(action="#", method="get")
+      fieldset.modal__fieldset
+        legend.modal__legend.visually-hidden Создание репозитория
+        label.modal__field
+          span.modal__label Имя
+          input.modal__input(type="text", name="firstName" id="firstNameField" minlength="2" maxlength="25" pattern="^[A-Za-zА-Яа-я]{2,25}$" placeholder="Алексей" require)
+        label.modal__field
+          span.modal__label Фамилия
+          input.modal__input(type="text", name="lastName" id="lastNameField" minlength="2" maxlength="25" pattern="^[A-Za-zА-Яа-я]{2,25}$" placeholder="Алексеев" require)
+      button.modal__btn(type="submit") Создать репозиторий!
+      button.modal__reset(type="reset") Сбросить
+
+block bg
+  .bg

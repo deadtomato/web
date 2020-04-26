@@ -1,0 +1,10 @@
+mixin articleNavItem (id, name)
+  li.article__menu-item
+        a(href='#'+id class="article__menu-link")=name
+
+mixin menuItem(text, href, isCurrent)
+  li(class="site-menu__item")
+    if (href == isCurrent)
+      a(class="site-menu__link site-menu__link--current")=text
+    else
+      a(class="site-menu__link" href=href)=text

@@ -1,0 +1,140 @@
+.site-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  display: none;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
+  padding-top: 35px;
+  padding-bottom: 70px;
+
+  text-align: center;
+
+  background-color: #ffffff;
+  box-shadow: 0 20px 25px -5px gray;
+}
+
+.site-menu__item {
+  margin-bottom: 25px;
+}
+
+.site-menu__item--projects {
+  margin-top: 80px;
+}
+
+.site-menu__item--btn {
+  position: absolute;
+  top: 19px;
+  left: 16px;
+}
+
+
+.site-menu__link {
+  font-weight: 800;
+  font-size: 16px;
+  color: tomato;
+}
+
+.site-menu__link--current {
+  color: #494859;
+}
+
+.site-menu__link--projects {
+  &::after {
+    content: ":";
+  }
+
+  svg {
+    display: none;
+  }
+}
+
+@media (min-width: 1120px) {
+  .site-menu {
+    position: static;
+
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    padding: 0;
+
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .site-menu__item {
+    margin-right: 25px;
+    margin-bottom: 0;
+  }
+
+  .site-menu__item--btn {
+    display: none;
+  }
+
+  .site-menu__link {
+    font-weight: 800;
+    font-size: 14px;
+    color: tomato;
+  }
+
+  .site-menu__link:hover,
+  .site-menu__link:focus {
+    opacity: 0.7;
+  }
+
+  .site-menu__link:active {
+    opacity: 0.5;
+  }
+
+  .site-menu__link--current {
+    color: #494859;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:focus {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+  }
+
+  .site-menu__item--projects {
+    position: relative;
+
+    margin: 0;
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+
+  .site-menu__link--projects {
+    position: relative;
+
+    padding-left: 25px;
+
+    svg {
+      display: block;
+      position: absolute;
+      top: -2px;
+      left: 0;
+    }
+  }
+
+  .site-menu__link--projects::after {
+    content: "";
+  }
+
+  .site-menu__item--projects:hover .sub-menu,
+  .site-menu__item--projects:focus .sub-menu {
+    visibility: visible;
+  }
+}
