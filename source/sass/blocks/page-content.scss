@@ -209,7 +209,11 @@
   }
 
   .page-content__title {
-    width: 50%;
+    width: auto;
+
+    &--project {
+      width: 50%;
+    }
   }
 
   .page-content__btn {
