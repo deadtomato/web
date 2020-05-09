@@ -11,6 +11,72 @@
 
 .description__item {
   margin-bottom: 40px;
+  padding-bottom: 30px;
+
+  border-bottom: 3px solid #353340;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.description__intro {
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  padding: 30px 15px 40px 15px;
+
+  font-size: 14px;
+
+  background-color: #e2e2e2;
+  border: 1px solid gray;
+  border-radius: 10px;
+
+  &-title {
+    margin-top: 0;
+  }
+
+  &-list {
+    @include no-list;
+  }
+
+  &-item {
+    position: relative;
+
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+
+    border-bottom: 1px solid rgb(197, 197, 197);
+
+    &:last-of-type {
+      margin-bottom: 0;
+      padding-bottom: 0;
+
+      border-bottom: none;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 3px;
+
+      display: block;
+      width: 7px;
+      height: 3px;
+
+      background-color: tomato;
+    }
+  }
+
+  &-help {
+    color: tomato;
+    font-style: italic;
+
+    code {
+      font-size: 12px;
+    }
+  }
 }
 
 .description__video {
@@ -34,9 +100,9 @@
 }
 
 .description__sub {
-  padding-left: 20px;
-
   @include no-list;
+  
+  padding-left: 20px;
 }
 
 .description__sub-item {
@@ -56,16 +122,59 @@
   border-left: 5px solid tomato;
 }
 
+.description__css {
+  color: #253fb1;
+}
+
+.description__inner-list {
+  @include no-list;
+  margin-top: 10px;
+}
+
+.description__inner-item {
+  position: relative;
+
+  margin-bottom: 10px;
+  padding-left: 30px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 17px;
+
+    display: block;
+    width: 7px;
+    height: 3px;
+
+    background-color: tomato;
+  }
+}
+
+
 @media (min-width: 768px) {
   .description--instruction {
     padding: 20px 30px;
   }
 
   .description__video {
-    padding-bottom: 308px;
     width: 550px;
     margin: 0 auto;
-  
+    padding-bottom: 308px;
+  }
+
+  .description__intro {
+    padding: 30px 20px 40px 30px;
+
+    &-item {
+      padding-left: 30px;
+
+      &::before {
+        left: 10px;
+
+        width: 10px;
+      }
+    }
   }
 }
 
@@ -80,8 +189,7 @@
   }
 
   .description__video {
-    padding-bottom: 382px;
     width: 680px;
+    padding-bottom: 382px;
   }
-  
 }

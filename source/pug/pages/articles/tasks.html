@@ -24,7 +24,8 @@
 
       <li class="description__sub-item">
         <span class="description__num">5.</span>
-        <span class="description__text">Установите <b>gulp</b> и плагины <b>(gulp-sass, gulp-plumber, gulp-postcss, gulp-sourcemaps, autoprefixer,browser-sync)</b></span>
+        <span class="description__text">Установите <b>gulp</b> и плагины <b>(gulp-sass, gulp-plumber, gulp-postcss,
+            gulp-sourcemaps, autoprefixer,browser-sync)</b></span>
       </li>
 
       <li class="description__sub-item">
@@ -39,13 +40,17 @@
 
       <li class="description__sub-item">
         <span class="description__num">8.</span>
-        <span class="description__text">Создайте структуру проекта в папке <b>source</b>. В пустых папках <b>img</b>, <b>fonts</b> и т.д. создайте файл <b>README</b> <b>(БЕЗ РАСШИРЕНИЯ!)</b>, в котором укажите, что должно быть в этой папке.</span>
-        <span class="description__example">К примеру, в папке <b>img</b> должен лежать файл <b>README</b> с текстом: <i>"Папка для изображений"</i></span>
+        <span class="description__text">Создайте структуру проекта в папке <b>source</b>. В пустых папках <b>img</b>,
+          <b>fonts</b> и т.д. создайте файл <b>README</b> <b>(БЕЗ РАСШИРЕНИЯ!)</b>, в котором укажите, что должно быть в
+          этой папке.</span>
+        <span class="description__example">К примеру, в папке <b>img</b> должен лежать файл <b>README</b> с текстом:
+          <i>"Папка для изображений"</i></span>
       </li>
 
       <li class="description__sub-item">
         <span class="description__num">9.</span>
-        <span class="description__text">Создайте в source файл <b>index.html</b>. Создайте базовую разметку. В <b>body</b> создайте заголовок первого уровня с текстом <i>Hello world!</i></span>
+        <span class="description__text">Создайте в source файл <b>index.html</b>. Создайте базовую разметку. В
+          <b>body</b> создайте заголовок первого уровня с текстом <i>Hello world!</i></span>
       </li>
 
       <li class="description__sub-item">
@@ -55,14 +60,190 @@
 
       <li class="description__sub-item">
         <span class="description__num">11.</span>
-        <span class="description__text">Создайте пулреквест из ветки <b>task-1</b> вашего форка в мастер-репозиторий.</span>
+        <span class="description__text">Создайте пулреквест из ветки <b>task-1</b> вашего форка в
+          мастер-репозиторий.</span>
       </li>
 
       <li class="description__sub-item">
-        <span class="description__example">Если требуются дополнительные изменения, то их нужно вносить в ветке из которой создан пулреквест. Новый пулреквест создавать не нужно. Все изменения автоматически появятся в уже созданном пулреквесте.</span>
+        <span class="description__example">Если требуются дополнительные изменения, то их нужно вносить в ветке из
+          которой создан пулреквест. Новый пулреквест создавать не нужно. Все изменения автоматически появятся в уже
+          созданном пулреквесте.</span>
       </li>
 
     </ul>
   </li>
-</ul>
+  <li class="description__item">
+    <h3 class="description__title">2. Разметка</h3>
+    <div class="description__intro">
+      <h4 class="description__intro-title">Прежде чем приступить к заданию необходимо обновить ветку master</h4>
+      <ul class="description__intro-list">
+        <li class="description__intro-item">
+          <p class="description__intro-text">В вашей локальной копии переключитесь в ветку master
+          </p>
+          <code class="description__intro-code">git checkout master</code>
+        </li>
+        <li class="description__intro-item">
+          <p class="description__intro-text">Заберите изменения из мастер-репозитория
+          </p>
+          <code class="description__intro-code">git pull main master</code>
+          <div class="description__intro-help">
+            <p class="description__intro-text">В main должна быть ссылка на мастер-репозиторий, Если ее там нет, добавьте:</p>
+            <code class="description__intro-code">git remote add main &lt;ссылка на мастер-репозиторий&gt;</code>
+          </div>
+        </li>
+        <li class="description__intro-item">
+          <p class="description__intro-text">Отправьте изменения ветки master в ваш форк на Github
+          </p>
+          <code class="description__intro-code">git push origin master</code>
+        </li>
+        <li class="description__intro-item">
+          <p class="description__intro-text">Когда обновите master, создайте ветку для выполнения задания
+          </p>
+          <code class="description__intro-code">git checkout -b task-2</code>
+        </li>
+      </ul>
+    </div>
+    <ul class="description__sub">
+      <li class="description__sub-item">
+        <span class="description__num">1. </span>
+        <span class="description__text">Выполните разметку трёх страниц мобильной версии проекта. Разметка должна быть
+          выполнена в соответствии с методологией <b>БЭМ</b>. <i>(Не используйте обозначение мобильной версии <b>-mobile</b> в
+          именах файлов или классов)</i></span>
+        <div class="description__example">
+          <p>Пример хороших названий страниц в проекте:</p>
+          <pre>
+  cathotel
+  |-source
+  |--index.html
+  |--catalog.html
+  |--room.html
+          </pre>
+        </div>
+        <span class="description__text">На этом этапе нужна только HTML-разметка, без CSS.</span>
+        <span class="description__example">
+          Изображения пока вырезать не нужно — используйте вместо них заглушки, например:
+          <code>&lt;img src="https://via.placeholder.com/150x150"&gt;</code>
+        </span>
+      </li>
 
+      <li class="description__sub-item">
+        <span class="description__num">2. </span>
+        <span class="description__text">Создайте пулреквест из ветки <b>task-2</b> вашего форка в мастер-репозиторий,
+          чтобы отправить задание на проверку.</span>
+      </li>
+    </ul>
+  </li>
+  <li class="description__item">
+    <h3 class="description__title">3. Начало стилизации с препроцессором.</h3>
+    <div class="description__intro">
+      <h4 class="description__intro-title">Прежде чем приступить к заданию необходимо обновить ветку master</h4>
+      <ul class="description__intro-list">
+        <li class="description__intro-item">
+          <p class="description__intro-text">В вашей локальной копии переключитесь в ветку master
+          </p>
+          <code class="description__intro-code">git checkout master</code>
+        </li>
+        <li class="description__intro-item">
+          <p class="description__intro-text">Заберите изменения из мастер-репозитория
+          </p>
+          <code class="description__intro-code">git pull main master</code>
+          <div class="description__intro-help">
+            <p class="description__intro-text">В main должна быть ссылка на мастер-репозиторий, Если ее там нет, добавьте:</p>
+            <code class="description__intro-code">git remote add main &lt;ссылка на мастер-репозиторий&gt;</code>
+          </div>
+        </li>
+        <li class="description__intro-item">
+          <p class="description__intro-text">Отправьте изменения ветки master в ваш форк на Github
+          </p>
+          <code class="description__intro-code">git push origin master</code>
+        </li>
+        <li class="description__intro-item">
+          <p class="description__intro-text">Когда обновите master, создайте ветку для выполнения задания
+          </p>
+          <code class="description__intro-code">git checkout -b task-3</code>
+        </li>
+      </ul>
+    </div>
+
+    <ul class="description__sub">
+      <li class="description__sub-item">
+        <span class="description__num">1. </span>
+        <span class="description__text">Определите Шрифты в макете, скачайте и добавьте в папку для шрифтов в проекте.</span>
+      </li>
+
+      <li class="description__sub-item">
+        <span class="description__num">2. </span>
+        <span class="description__text">В папке <b>sass</b> создайте файлы: <b>style.scss,</b> <b>fonts.scss,</b> <b>globals.scss.</b></span>
+      </li>
+
+      <li class="description__sub-item">
+        <span class="description__num">3. </span>
+        <span class="description__text">В <b>fonts.scss</b> подключите шрифтовые гарнитуры.</span>
+      </li>
+
+      <li class="description__sub-item">
+        <span class="description__num">4. </span>
+        <span class="description__text">В <b>globals.scss</b> напишите глобальные свойства.</span>
+      </li>
+
+      <li class="description__sub-item">
+        <span class="description__num">5. </span>
+        <span class="description__text">Для проверки в файле <b>source/sass/style.scss</b> добавьте CSS-код:</span>
+        <pre class="description__css">
+    body { 
+      background: red; 
+    }
+        </pre>
+        <span class="description__text">Запустите сервер.</span>
+        <p class="description__text">В папке <b>css</b> должны появиться 2 файла <b>style.css</b> и файл <b>style.css.map</b></p>
+      </li>
+
+      <li class="description__sub-item">
+        <span class="description__num">6. </span>
+        <span class="description__text">Далее необходимо подключить <b>style.css</b> на свои страницы <i>(не забудьте сохранить изменения).</i></span>
+        <p class="description__text">Фон страницы в браузере должен стать красным.</p>
+      </li>
+
+      <li class="description__sub-item">
+        <span class="description__num">7. </span>
+        <span class="description__text">Создайте структуру препроцессорных файлов:</span>
+        <ul class="description__inner-list">
+          <li class="description__inner-item">
+            <span class="description__text">каждому БЭМ-блоку должен соответствовать отдельный препроцессорный файл</span>
+          </li>
+          <li class="description__inner-item">
+            <span class="description__text">файлы БЭМ-блоков импортируются в файле <b>source/sass/style.scss</b></span>
+          </li>
+          <li class="description__inner-item">
+            <span class="description__text">также  в файле <b>source/sass/style.scss</b> импортируются файлы шрифтов и глобальных стилей</span>
+          </li>
+          <li class="description__inner-item">
+            <span class="description__text">вспомогательные файлы с переменными, примесями и так далее создавайте на своё усмотрение</span>
+          </li>
+        </ul>
+      </li>
+
+      <li class="description__sub-item">
+        <span class="description__num">8. </span>
+        <span class="description__text">Начните вёрстку вашего проекта с помощью препроцессора:</span>
+        <ul class="description__inner-list">
+          <li class="description__inner-item">
+            <span class="description__text">задайте фоновые цвета и фоновые изображения для блоков</span>
+          </li>
+          <li class="description__inner-item">
+            <span class="description__text">параметры текста: шрифты, размеры шрифта, межстрочные расстояния, цвет текста</span>
+          </li>
+          <li class="description__inner-item">
+            <span class="description__text">добавьте внутренние и внешние отступы и обводки для крупных сеточных блоков</span>
+          </li>
+        </ul>
+        <span class="description__text">Мелкие декоративные элементы можно не верстать.</span>
+      </li>
+
+      <li class="description__sub-item">
+        <span class="description__num">9. </span>
+        <span class="description__text">Создайте пулреквест из ветки <b>task-3</b> вашего форка в мастер-репозиторий, чтобы отправить задание на проверку.</span>
+      </li>
+    </ul>
+  </li>
+</ul>
