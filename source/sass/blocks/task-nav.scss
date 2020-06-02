@@ -1,0 +1,32 @@
+.task-nav {
+  z-index: 10;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 60px 10% 30px 10%;
+  width: 100%;
+  height: 100vh;
+
+  transition: all 0.3s;
+}
+
+.task-nav__list {
+  @include no-list;
+}
+
+.task-nav__item {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.task-nav__link {
+  color: tomato;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.hide {
+  left: -100%;
+}
