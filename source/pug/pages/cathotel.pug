@@ -5,6 +5,11 @@ block variables
   - var href = 'cathotel.html'
 
 block content
+    
+  button.page-content__tasks-nav-btn
+    svg(width="16" height="16")
+      use(xlink:href="img/sprite.svg#arrow-classic")
+
   button.page-content__btn.page-content__modal-open-btn(type="button") Создать проект
   a.page-content__btn.page-content__template-btn(href="https://www.figma.com/file/oBVAM3fKhJZeotPJNbGDde/hotelcats-Copy?node-id=0%3A1" target="_blank" rel="noopener noreferrer") Макет
   .page-content__container
@@ -19,7 +24,7 @@ block content
       label.page-content__instruction-btn(for="instruction") 
         span Как работать над проектом
         svg(width="15", height="20")
-            use(xlink:href="img/sprite.svg#arrow")
+          use(xlink:href="img/sprite.svg#arrow")
       div.page-content__instruction-container
         include ./articles/instruction.html
       
@@ -31,6 +36,43 @@ block content
     section.project.project--criteries.page-content__criteries.description
       h2.project__title Критерии
       include ./articles/criteries.html
+
+block task-nav
+  .task-nav.hide
+    ul.task-nav__list
+      li.task-nav__item
+        a.task-nav__link(href="#task1")
+          span.task-nav__title Подготовка к работе
+      li.task-nav__item
+        a.task-nav__link(href="#task2")
+          span.task-nav__title Разметка
+      li.task-nav__item
+        a.task-nav__link(href="#task3") 
+          span.task-nav__title Начало стилизации с препроцессором
+      li.task-nav__item
+        a.task-nav__link(href="#task4") 
+          span.task-nav__title Верстка адаптивных сеток
+      li.task-nav__item
+        a.task-nav__link(href="#task5") 
+          span.task-nav__title Верстка адаптивных декоративных элементов
+      li.task-nav__item
+        a.task-nav__link(href="#task6") 
+          span.task-nav__title Адаптивная графика
+      li.task-nav__item
+        a.task-nav__link(href="#task7") 
+          span.task-nav__title Векторная графика и оптимизация
+      li.task-nav__item
+        a.task-nav__link(href="#task8") 
+          span.task-nav__title Сборка проекта
+      li.task-nav__item
+        a.task-nav__link(href="#task9") 
+          span.task-nav__title Оптимизация скорости загрузки
+      li.task-nav__item
+        a.task-nav__link(href="#task10") 
+          span.task-nav__title Скрипты
+      li.task-nav__item
+        a.task-nav__link(href="#task11") 
+          span.task-nav__title Favicon
 
 block modal
   .modal
