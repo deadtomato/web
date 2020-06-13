@@ -16,6 +16,9 @@ const showBtn = () => {
   }
 };
 
+// TODO Подумать над скрытием из разметки, чтобы не возникало непредвиденных нажатий.
+// TODO Сделать проверку, что открыта именно вкладка с заданиями.
+
 const hideBtn = () => {
   if (btn.classList.contains(`show`)) {
     btn.classList.remove(`show`);
