@@ -15,8 +15,10 @@ const OWNER = `papatomatoe`;
 const METHOD = `POST`;
 const IS_PRIVATE = false;
 
+PAT = `bc20949945eb6797941e4d7bae746c17746967b0`
+
 const Headers = {
-  Authorization: `Token 6e43be0e9304d2c7318e051ec80daf691c761e38`,
+  Authorization: `Token ${PAT}`,
   Accept: "application/vnd.github.baptiste-preview+json"
 };
 
