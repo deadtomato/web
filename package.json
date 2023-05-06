@@ -21,7 +21,7 @@
   "homepage": "https://github.com/deadtomato/SMIT-First-site#readme",
   "devDependencies": {
     "autoprefixer": "9.7.6",
-    "browser-sync": "2.26.7",
+    "browser-sync": "2.29.1",
     "del": "5.1.0",
     "gulp": "4.0.2",
     "gulp-csso": "4.0.1",
